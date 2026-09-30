@@ -27,10 +27,11 @@ Last reviewed: 30 Sep 2026. **(R#)** refers to the numbered finding in that revi
 
 ## 2. Git and GitHub (Ex 0.1 / 0.2)
 
-- [ ] **You:** create or clone your personal GitHub repo and move the site files to its root **(R2, Critical)**
-- [ ] **Claude:** add a `.gitignore` that excludes `.claude-flow/` and `.impeccable/review/` **(R9)**
-- [ ] **You:** first commit (the site as it stands), then small commits after each item below
-- [ ] **You:** push to GitHub and check the repo shows a real commit history
+- [x] Public repo created: https://github.com/HienThong-vie/demonstration-1-COS30045 **(R2)**
+- [x] `.gitignore` excludes `.claude-flow/` and the `.impeccable/` review, question and cache files **(R9, repo side)**
+- [x] First commits made, grouped by feature (site shell, calculator, D3 chart, README, notes)
+- [ ] **You:** keep making small commits after each item below
+- [x] Pushed to GitHub (`main` tracks `origin/main`)
 
 ## 3. KNIME: Ex 1 and Ex 2 (the actual Demo 1 submission)
 
@@ -158,3 +159,4 @@ Put the data in the workflow's `data/` folder and read it "relative to current w
 | 30 Sep 2026 | Full visual redesign ("The Test Report"), independent finish review: all fixes resolved, verdict *ship* |
 | 30 Sep 2026 | Logo added, palette matched to the logo, current-page nav changed from underline to a filled tab, focus ring made visible on yellow |
 | 30 Sep 2026 | `PRODUCT.md` and `DESIGN.md` (design system for the Weeks 5–6 charts) written |
+| 30 Sep 2026 | Site published to the public GitHub repo `demonstration-1-COS30045` in 5 feature commits |
