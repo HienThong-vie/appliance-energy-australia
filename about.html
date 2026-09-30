@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Appliance Energy Australia | About Us</title>
+  <meta name="description" content="About the Appliance Energy Australia project.">
+  <link rel="icon" href="assets/img/PowerIcon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/img/PowerIcon.png" alt="" width="44" height="44">
+        <span class="brand-name">Appliance Energy<span class="brand-sub">Australia</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="televisions.html">Televisions</a></li>
+          <li><a href="about.html" aria-current="page">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="report-head" aria-labelledby="page-title">
+      <div class="container">
+        <h1 id="page-title">How we tested, and who we are</h1>
+        <p class="standfirst">Appliance Energy Australia is a student project that turns public appliance data into clear, honest visualisations. This page is the method and the fine print behind every number on the site.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container about-grid">
+        <div class="prose">
+          <h2>Why this site exists</h2>
+          <p>Energy labels contain useful information, but the numbers are easy to overlook in a shop. This site aims to show that information in a way people can explore, so they can compare appliances and understand what their choices mean for their power bill.</p>
+
+          <h2>Who it is for</h2>
+          <p>The Televisions page is written for Australian households choosing a new TV. They want to know whether a bigger or more premium screen will noticeably increase their power bill, and how to compare models in the shop.</p>
+
+          <h2>How we tested</h2>
+          <h3>Source</h3>
+          <p>The site uses appliance registration data published by the Australian Government through the <a href="https://www.energyrating.gov.au/">Energy Rating</a> program. The television data set is the extract dated 15 February 2026. Each row is one registered model, with its screen size, screen technology, star rating and labelled energy consumption.</p>
+
+          <h3>Processing</h3>
+          <p>The data was cleaned and summarised in KNIME. Only models marked as available and sold in Australia were kept, and brand names that appeared in more than one form were merged. Screen size was converted from centimetres to inches and grouped into small (43 inches or less), medium (44 to 65) and large (66 or more). Average energy use and an example yearly cost were then calculated for each group and screen type, and exported as CSV files for the charts.</p>
+
+          <h3>Privacy</h3>
+          <p>The data set describes products, not people. It contains no personal information, only brand and model details submitted by the companies that register their televisions.</p>
+
+          <h3>Accuracy and limitations</h3>
+          <p>Energy figures come from a standard test that assumes 10 hours of viewing a day, so real use will differ. Standby power is not included in the running costs. A few screen sizes look like they may have been entered incorrectly. The data counts models, not sales, so a brand with many models is not necessarily the most popular. The $0.33/kWh price is an example, and real tariffs vary by state and retailer.</p>
+
+          <h3>Ethics</h3>
+          <p>The site does not recommend any brand or model. Charts start at zero and use the same scale within each chart so differences are not exaggerated. Averages are shown with the number of models behind them where the group is small.</p>
+
+          <h2>How it is built</h2>
+          <p>The pages use HTML, a single external CSS file and plain JavaScript. Charts are drawn with the D3.js library. The code is kept in a GitHub repository and the site is hosted on Swinburne's Mercury web server.</p>
+        </div>
+
+        <aside class="info-panel" aria-labelledby="details-title">
+          <h2 id="details-title">Report details</h2>
+          <dl>
+            <div><dt>Built by</dt><dd>Chung Hien Thong</dd></div>
+            <div><dt>Unit</dt><dd>COS30045 Data Visualisation</dd></div>
+            <div><dt>Institution</dt><dd>Swinburne University of Technology</dd></div>
+            <div><dt>Data source</dt><dd><a href="https://www.energyrating.gov.au/">energyrating.gov.au</a>, televisions extract of 15 February 2026</dd></div>
+            <div><dt>Models tested</dt><dd>4,508</dd></div>
+            <div><dt>Generative AI</dt><dd>Claude (Anthropic) was used to help build this site. See the README for how it was used.</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Chung Hien Thong &middot; COS30045 Data Visualisation, Swinburne University of Technology</p>
+      <p>Built with help from generative AI (Claude, Anthropic). See the README for details.</p>
+    </div>
+  </footer>
+</body>
+</html>

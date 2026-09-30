@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Appliance Energy Australia | Home</title>
+  <meta name="description" content="A plain-language guide to how much electricity household appliances use in Australia.">
+  <link rel="icon" href="assets/img/PowerIcon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/report.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/img/PowerIcon.png" alt="" width="44" height="44">
+        <span class="brand-name">Appliance Energy<span class="brand-sub">Australia</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="televisions.html">Televisions</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="cover" aria-labelledby="cover-title">
+      <div class="container cover-grid">
+        <div>
+          <h1 id="cover-title">What 4,508 TVs cost to run</h1>
+          <p class="standfirst">We tested every television registered for sale in Australia against its Energy Rating Label, to answer one question for households buying a new set: does a bigger or more premium screen noticeably raise your power bill?</p>
+          <div class="cover-actions">
+            <a class="btn" href="televisions.html">Read the full test</a>
+            <a class="btn btn-quiet" href="televisions.html#calculator">Check your own TV</a>
+          </div>
+          <p class="byline">Data: Australian Government Energy Rating registrations, extract of 15 February 2026. Cleaned and summarised in KNIME.</p>
+        </div>
+
+        <aside class="verdict" aria-labelledby="verdict-title">
+          <h2 id="verdict-title">Verdict: screen size sets the bill</h2>
+          <p class="verdict-lead">Average yearly running cost by screen size.</p>
+          <ol class="scores" data-grow>
+            <li class="score score-small">
+              <span class="score-label">Small</span>
+              <span class="score-track"><span class="score-fill"></span></span>
+              <span class="score-value">$52</span>
+            </li>
+            <li class="score score-medium">
+              <span class="score-label">Medium</span>
+              <span class="score-track"><span class="score-fill"></span></span>
+              <span class="score-value">$134</span>
+            </li>
+            <li class="score score-large">
+              <span class="score-label">Large</span>
+              <span class="score-track"><span class="score-fill score-fill-focus"></span></span>
+              <span class="score-value">$247</span>
+            </li>
+          </ol>
+          <p class="fine-print">Small: 43 inches or less. Medium: 44 to 65. Large: 66 or more. Labelled energy (10 hours a day) at an example price of $0.33/kWh.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="label" aria-labelledby="label-title">
+      <div class="container split">
+        <div class="section-head">
+          <h2 id="label-title">How to read the Energy Rating Label</h2>
+          <p>Two numbers on the label matter most: the star rating and the yearly energy use.</p>
+        </div>
+        <dl class="label-guide">
+          <div>
+            <dt>Stars compare like with like</dt>
+            <dd>More stars means an appliance uses less electricity than others of the same type and a similar size. Stars are most useful when you are choosing between two models.</dd>
+          </div>
+          <div>
+            <dt>kWh per year is the number to use</dt>
+            <dd>The label estimates energy use in kilowatt-hours per year, based on a standard test. Multiply it by your electricity price to get an approximate yearly running cost.</dd>
+          </div>
+          <div>
+            <dt>Your habits change the result</dt>
+            <dd>The label assumes 10 hours of viewing a day. If you watch more or less, your real use will differ. <a href="televisions.html#calculator">The calculator</a> lets you enter your own hours.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="faq-title">
+      <div class="container split">
+        <div class="section-head">
+          <h2 id="faq-title">Frequently asked questions</h2>
+          <p>Select a question to show or hide the answer.</p>
+        </div>
+
+        <div class="faq">
+          <div class="faq-item">
+            <h3 class="faq-q">
+              <button type="button" id="faq-1-btn" aria-expanded="false" aria-controls="faq-1">
+                What is the Energy Rating Label?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-a" id="faq-1" role="region" aria-labelledby="faq-1-btn" hidden>
+              <p>It is a label shown on many household appliances sold in Australia and New Zealand. It gives a star rating and an estimate of how much electricity the appliance uses in a year.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-q">
+              <button type="button" id="faq-2-btn" aria-expanded="false" aria-controls="faq-2">
+                Which appliances have to carry a label?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-a" id="faq-2" role="region" aria-labelledby="faq-2-btn" hidden>
+              <p>Labelling applies to common household appliances such as televisions, fridges and freezers, washing machines, clothes dryers, dishwashers, air conditioners and computer monitors.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-q">
+              <button type="button" id="faq-3-btn" aria-expanded="false" aria-controls="faq-3">
+                Where does the data on this site come from?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-a" id="faq-3" role="region" aria-labelledby="faq-3-btn" hidden>
+              <p>The television data comes from registration records published by the Australian Government's Energy Rating program. This site uses the extract dated 15 February 2026, cleaned and summarised in KNIME.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-q">
+              <button type="button" id="faq-4-btn" aria-expanded="false" aria-controls="faq-4">
+                How accurate is the running cost calculator?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-a" id="faq-4" role="region" aria-labelledby="faq-4-btn" hidden>
+              <p>It gives an estimate. Real power draw changes with settings such as screen brightness, and the calculator does not include standby power. Treat the result as a guide for comparing options.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-q">
+              <button type="button" id="faq-5-btn" aria-expanded="false" aria-controls="faq-5">
+                Does a bigger TV always use more energy?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-a" id="faq-5" role="region" aria-labelledby="faq-5-btn" hidden>
+              <p>In the data, yes: energy use rises steadily with screen size, and a large TV costs about five times as much to run as a small one. Screen technology makes a much smaller difference. The Televisions page shows this step by step.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-q">
+              <button type="button" id="faq-6-btn" aria-expanded="false" aria-controls="faq-6">
+                Will my TV use exactly what the label says?
+                <span class="faq-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-a" id="faq-6" role="region" aria-labelledby="faq-6-btn" hidden>
+              <p>Probably not. The label comes from a standard laboratory test and assumes 10 hours of viewing a day. Brightness settings, the content you watch and how many hours you use the TV all change the real figure.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Chung Hien Thong &middot; COS30045 Data Visualisation, Swinburne University of Technology</p>
+      <p>Built with help from generative AI (Claude, Anthropic). See the README for details.</p>
+    </div>
+  </footer>
+</body>
+</html>

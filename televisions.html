@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Appliance Energy Australia | Televisions</title>
+  <meta name="description" content="How screen size and screen type affect what a television costs to run in Australia, with a running cost calculator.">
+  <link rel="icon" href="assets/img/PowerIcon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/d3@7" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/barchart.js" defer></script>
+  <script src="assets/js/report.js" defer></script>
+  <script src="assets/js/calculator.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/img/PowerIcon.png" alt="" width="44" height="44">
+        <span class="brand-name">Appliance Energy<span class="brand-sub">Australia</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="televisions.html" aria-current="page">Televisions</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="report-head" aria-labelledby="page-title">
+      <div class="container">
+        <h1 id="page-title">Screen size decides most of what a TV costs to run</h1>
+        <p class="standfirst">A test of every television registered for sale in Australia. Does a bigger screen, or a premium OLED screen, cost much more to run? Four findings, then a calculator for your own TV.</p>
+      </div>
+    </section>
+
+    <div class="container report-layout">
+      <nav class="rail" aria-labelledby="rail-title">
+        <h2 class="rail-title" id="rail-title">In this report</h2>
+        <ol>
+          <li><a href="#finding-1">Most TVs are 43 to 75 inches</a></li>
+          <li><a href="#finding-2">Bigger screens use more</a></li>
+          <li><a href="#finding-3">Large costs five times small</a></li>
+          <li><a href="#finding-4">Screen type matters less</a></li>
+          <li class="rail-extra"><a href="#brands">Who makes them</a></li>
+          <li class="rail-extra"><a href="#calculator">Check your own TV</a></li>
+        </ol>
+      </nav>
+
+      <article>
+        <section class="method" id="method" aria-labelledby="method-title">
+          <h2 id="method-title">How we tested</h2>
+          <dl>
+            <div><dt>Models tested</dt><dd>4,508 televisions available for sale in Australia</dd></div>
+            <div><dt>Data</dt><dd>Energy Rating registrations, extract of 15 February 2026</dd></div>
+            <div id="note-1"><dt>Energy <sup>1</sup></dt><dd>Labelled kWh per year, from a standard test of 10 hours a day</dd></div>
+            <div id="note-2"><dt>Cost <sup>2</sup></dt><dd>Labelled kWh &times; $0.33 per kWh (an example price)</dd></div>
+          </dl>
+          <p class="fine-print">Brand names were standardised and screen sizes converted to inches in KNIME. <a href="about.html">Full method and limitations</a></p>
+        </section>
+
+        <section class="finding" id="finding-1" aria-labelledby="finding-1-title">
+          <p class="finding-number" aria-hidden="true">1</p>
+          <div class="finding-body">
+            <h2 id="finding-1-title">Most TVs on sale are 43 to 75 inches</h2>
+            <p>Around two in three models have a screen between 43 and 75 inches, and the most common sizes are 55 and 65 inches. Very small and very large screens are much rarer.</p>
+            <figure class="chart-figure">
+              <img class="chart-img" src="assets/img/charts/size-histogram.png" alt="Histogram of screen sizes. Most models fall between 43 and 75 inches, with the highest counts around 55 and 65 inches." loading="lazy">
+              <figcaption>Number of models by screen size in inches. Source: Energy Rating registrations, 15 February 2026. Processed in KNIME.</figcaption>
+            </figure>
+            <details class="data-table">
+              <summary>Show the data table</summary>
+              <div class="table-scroll">
+                <table>
+                  <caption>Models by screen size (each group includes its upper value)</caption>
+                  <thead><tr><th scope="col">Screen size</th><th scope="col" class="num">Models</th></tr></thead>
+                  <tbody>
+                    <tr><td>10 to 20 inches</td><td class="num">23</td></tr>
+                    <tr><td>20 to 30 inches</td><td class="num">212</td></tr>
+                    <tr><td>30 to 40 inches</td><td class="num">475</td></tr>
+                    <tr><td>40 to 50 inches</td><td class="num">824</td></tr>
+                    <tr><td>50 to 60 inches</td><td class="num">784</td></tr>
+                    <tr><td>60 to 70 inches</td><td class="num">954</td></tr>
+                    <tr><td>70 to 80 inches</td><td class="num">657</td></tr>
+                    <tr><td>80 to 90 inches</td><td class="num">433</td></tr>
+                    <tr><td>90 to 100 inches</td><td class="num">137</td></tr>
+                    <tr><td>Over 100 inches</td><td class="num">9</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </details>
+            <p class="imperative">Compare models within 43 to 75 inches; that is where the real choice is.</p>
+          </div>
+        </section>
+
+        <section class="finding" id="finding-2" aria-labelledby="finding-2-title">
+          <p class="finding-number" aria-hidden="true">2</p>
+          <div class="finding-body">
+            <h2 id="finding-2-title">Bigger screens use more electricity</h2>
+            <p>Each dot is one model. As screen size goes up, the energy use on the label<sup><a href="#note-1" aria-label="Note 1: labelled energy assumes 10 hours of viewing a day">1</a></sup> goes up with it, from under 100&nbsp;kWh a year for the smallest sets to more than 1,000&nbsp;kWh for the largest. The pattern holds across brands.</p>
+            <figure class="chart-figure">
+              <img class="chart-img" src="assets/img/charts/size-vs-energy.png" alt="Scatter plot of screen size in inches against labelled energy use in kilowatt-hours per year, showing energy use rising steadily with screen size." loading="lazy">
+              <figcaption>Screen size in inches against labelled energy consumption in kWh per year.</figcaption>
+            </figure>
+            <details class="data-table">
+              <summary>Show the data table</summary>
+              <div class="table-scroll">
+                <table>
+                  <caption>Average labelled energy by screen size group</caption>
+                  <thead><tr><th scope="col">Size group</th><th scope="col" class="num">Average kWh per year</th><th scope="col" class="num">Models</th></tr></thead>
+                  <tbody>
+                    <tr><td>Small (43 inches or less)</td><td class="num">158</td><td class="num">1,111</td></tr>
+                    <tr><td>Medium (44 to 65 inches)</td><td class="num">405</td><td class="num">2,059</td></tr>
+                    <tr><td>Large (66 inches or more)</td><td class="num">749</td><td class="num">1,338</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </details>
+            <p class="imperative">Check the kWh figure before you size up; each step adds to every year&rsquo;s bill.</p>
+          </div>
+        </section>
+
+        <section class="finding" id="finding-3" aria-labelledby="finding-3-title">
+          <p class="finding-number" aria-hidden="true">3</p>
+          <div class="finding-body">
+            <h2 id="finding-3-title">A large TV costs about five times as much to run as a small one</h2>
+            <p>At an example price of $0.33 per kWh<sup><a href="#note-2" aria-label="Note 2: the electricity price is an example">2</a></sup>, an average large TV costs roughly $250 a year to run, compared with about $50 for a small one. Over five years of ownership that gap is close to $1,000.</p>
+            <figure class="chart-figure">
+              <div id="cost-chart" class="responsive-svg-container">
+                <img class="chart-img" src="assets/img/charts/size-category-cost.png" alt="Bar chart of average yearly running cost by screen size: small about 52 dollars, medium about 134 dollars, large about 247 dollars." loading="lazy">
+              </div>
+              <figcaption>Average yearly running cost by screen size group, from labelled energy at $0.33/kWh. Small: 43 inches or less. Medium: 44 to 65. Large: 66 or more. Drawn with D3.</figcaption>
+            </figure>
+            <details class="data-table" open>
+              <summary>Show the data table</summary>
+              <div class="table-scroll">
+                <table>
+                  <caption>Average yearly running cost by screen size group</caption>
+                  <thead><tr><th scope="col">Size group</th><th scope="col" class="num">Average kWh per year</th><th scope="col" class="num">Cost per year</th><th scope="col" class="num">Models</th></tr></thead>
+                  <tbody>
+                    <tr><td>Small</td><td class="num">158</td><td class="num">$52</td><td class="num">1,111</td></tr>
+                    <tr><td>Medium</td><td class="num">405</td><td class="num">$134</td><td class="num">2,059</td></tr>
+                    <tr><td>Large</td><td class="num">749</td><td class="num">$247</td><td class="num">1,338</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </details>
+            <p class="imperative">Choose the screen your room needs, not the biggest one that fits on the wall.</p>
+          </div>
+        </section>
+
+        <section class="finding" id="finding-4" aria-labelledby="finding-4-title">
+          <p class="finding-number" aria-hidden="true">4</p>
+          <div class="finding-body">
+            <h2 id="finding-4-title">Screen type matters far less than size</h2>
+            <p>OLED televisions are often assumed to be power hungry. Compared at the same size, they are not: medium and large OLED models use about the same or slightly less energy on average than LED models. The gap between sizes is much bigger than the gap between screen types.</p>
+            <figure class="chart-figure">
+              <img class="chart-img" src="assets/img/charts/tech-by-size.png" alt="Grouped bar chart of average yearly energy use by screen type (LCD, LED, OLED) within small, medium and large sizes. Differences between screen types are small compared with differences between sizes." loading="lazy">
+              <figcaption>Average labelled energy consumption in kWh per year by screen technology within each size group.</figcaption>
+            </figure>
+            <details class="data-table">
+              <summary>Show the data table</summary>
+              <div class="table-scroll">
+                <table>
+                  <caption>Average kWh per year by screen type and size (number of models in brackets). A dashed rule marks a group too small to rely on.</caption>
+                  <thead><tr><th scope="col">Size group</th><th scope="col" class="num">LCD</th><th scope="col" class="num">LCD (LED)</th><th scope="col" class="num">OLED</th></tr></thead>
+                  <tbody>
+                    <tr class="small-sample"><td>Small <span class="sample-note">(OLED: small sample)</span></td><td class="num">135 (237)</td><td class="num">163 (857)</td><td class="num">232 (17)</td></tr>
+                    <tr><td>Medium</td><td class="num">385 (215)</td><td class="num">410 (1,671)</td><td class="num">381 (173)</td></tr>
+                    <tr><td>Large</td><td class="num">655 (110)</td><td class="num">760 (1,130)</td><td class="num">723 (98)</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </details>
+            <p class="imperative">Pick the screen type you like; within the same size, compare the kWh figure on the label instead.</p>
+          </div>
+        </section>
+
+        <section class="section" id="brands" aria-labelledby="brands-title">
+          <h2 id="brands-title">Three brands offer more than half of all models</h2>
+          <p class="section-lead">Samsung, Kogan and LG together register more than half of the televisions available. This counts models on offer, not TVs sold, and is not a recommendation of any brand.</p>
+          <figure class="chart-figure">
+            <img class="chart-img" src="assets/img/charts/brand-count.png" alt="Bar chart of the number of television models available by brand. Samsung has the most, followed by Kogan and LG." loading="lazy">
+            <figcaption>Number of models available by brand, after brand names were standardised in KNIME.</figcaption>
+          </figure>
+          <details class="data-table">
+            <summary>Show the data table</summary>
+            <div class="table-scroll">
+              <table>
+                <caption>Models available, top eight brands (4,508 models in total)</caption>
+                <thead><tr><th scope="col">Brand</th><th scope="col" class="num">Models</th></tr></thead>
+                <tbody>
+                  <tr><td>Samsung</td><td class="num">1,096</td></tr>
+                  <tr><td>Kogan</td><td class="num">788</td></tr>
+                  <tr><td>LG</td><td class="num">677</td></tr>
+                  <tr><td>Hisense</td><td class="num">263</td></tr>
+                  <tr><td>EKO</td><td class="num">189</td></tr>
+                  <tr><td>Sylvox</td><td class="num">132</td></tr>
+                  <tr><td>JVC</td><td class="num">122</td></tr>
+                  <tr><td>Philips</td><td class="num">118</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </section>
+      </article>
+    </div>
+
+    <section class="section band" id="calculator" aria-labelledby="calc-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="calc-title">Check your own TV</h2>
+          <p>Start from the average power of each size group, or enter the power rating printed on your own appliance. Then set the hours you watch and your electricity price.</p>
+        </div>
+
+        <div class="calc">
+          <form class="calc-form" id="calc-form" novalidate>
+            <div class="field">
+              <label for="appliance">Appliance</label>
+              <select id="appliance" name="appliance">
+                <option value="tvSmall">Small TV (43 inches or less)</option>
+                <option value="tvMedium" selected>Medium TV (44 to 65 inches)</option>
+                <option value="tvLarge">Large TV (66 inches or more)</option>
+                <option value="computer">Desktop computer</option>
+                <option value="microwave">Microwave</option>
+                <option value="custom">Other (enter your own)</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="watts">Power rating <span class="field-hint">In watts (W)</span></label>
+              <div class="input-unit">
+                <input type="number" id="watts" name="watts" value="106" min="1" max="10000" step="1" inputmode="decimal" aria-describedby="watts-error">
+                <span aria-hidden="true">W</span>
+              </div>
+              <p class="field-error" id="watts-error"></p>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="hours">Hours used per day</label>
+                <div class="input-unit">
+                  <input type="number" id="hours" name="hours" value="5" min="0.1" max="24" step="0.25" inputmode="decimal" aria-describedby="hours-error">
+                  <span aria-hidden="true">hrs</span>
+                </div>
+                <p class="field-error" id="hours-error"></p>
+              </div>
+
+              <div class="field">
+                <label for="price">Electricity price</label>
+                <div class="input-unit input-unit-wide">
+                  <input type="number" id="price" name="price" value="0.33" min="0.01" max="5" step="0.01" inputmode="decimal" aria-describedby="price-error">
+                  <span aria-hidden="true">$/kWh</span>
+                </div>
+                <p class="field-error" id="price-error"></p>
+              </div>
+            </div>
+
+            <button class="btn" type="submit">Calculate</button>
+          </form>
+
+          <div class="results verdict" aria-live="polite">
+            <h3>Your estimate</h3>
+            <p class="results-empty" id="results-empty">Your results will appear here after you press Calculate.</p>
+
+            <div id="results-output" hidden>
+              <p class="results-title">Yearly running cost for a <span id="result-appliance">medium TV</span></p>
+              <p class="results-total" id="result-yearly-cost">$0.00</p>
+              <dl class="figures">
+                <div><dt>Energy per day</dt><dd id="result-daily-kwh">0<span>kWh</span></dd></div>
+                <div><dt>Energy per month</dt><dd id="result-monthly-kwh">0<span>kWh</span></dd></div>
+                <div><dt>Energy per year</dt><dd id="result-yearly-kwh">0<span>kWh</span></dd></div>
+                <div><dt>Cost per month</dt><dd id="result-monthly-cost">$0.00</dd></div>
+              </dl>
+              <p class="fine-print">Energy per day (kWh) = power (W) &times; hours &divide; 1000. Standby power is not included.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Chung Hien Thong &middot; COS30045 Data Visualisation, Swinburne University of Technology</p>
+      <p>Built with help from generative AI (Claude, Anthropic). See the README for details.</p>
+    </div>
+  </footer>
+</body>
+</html>
