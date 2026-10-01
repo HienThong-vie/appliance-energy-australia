@@ -5,9 +5,8 @@ const chartHeight = 240;
 const labelWidth = 110;
 const valueSpace = 80;
 
-const moneyFormatter = d3.format("$,.0f");
-
 const drawBarChart = data => {
+  const moneyFormatter = d3.format("$,.0f");
   const container = d3.select("#cost-chart");
 
   const svg = container
@@ -77,14 +76,18 @@ const drawBarChart = data => {
   }
 };
 
-d3.csv("assets/data/size_category_energy.csv", d => {
-  return {
-    category: d.category,
-    cost: +d.avg_cost
-  };
-}).then(data => {
-  data.sort((a, b) => a.cost - b.cost);
-  drawBarChart(data);
-}).catch(error => {
-  console.error("Could not load the chart data, showing the static image instead.", error);
-});
+if (typeof d3 === "undefined") {
+  console.warn("D3 did not load, so the static chart image is shown instead.");
+} else {
+  d3.csv("assets/data/size_category_energy.csv", d => {
+    return {
+      category: d.category,
+      cost: +d.avg_cost
+    };
+  }).then(data => {
+    data.sort((a, b) => a.cost - b.cost);
+    drawBarChart(data);
+  }).catch(error => {
+    console.error("Could not load the chart data, showing the static image instead.", error);
+  });
+}
