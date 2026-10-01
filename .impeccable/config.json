@@ -1,3 +1,39 @@
 {
-  "buildPath": "code"
+  "buildPath": "code",
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-font-size",
+        "value": "1.2rem",
+        "createdAt": "2026-10-01T06:48:15.771Z",
+        "reason": "Documented in DESIGN.md as a component-specific size or phone-width variant (documenter run 30 Sep 2026; 30px chart labels added 1 Oct 2026 for phone legibility)"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "1.1rem",
+        "createdAt": "2026-10-01T06:48:16.111Z",
+        "reason": "Documented in DESIGN.md as a component-specific size or phone-width variant (documenter run 30 Sep 2026; 30px chart labels added 1 Oct 2026 for phone legibility)"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "1rem",
+        "createdAt": "2026-10-01T06:48:16.460Z",
+        "reason": "Documented in DESIGN.md as a component-specific size or phone-width variant (documenter run 30 Sep 2026; 30px chart labels added 1 Oct 2026 for phone legibility)"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "3rem",
+        "createdAt": "2026-10-01T06:48:16.796Z",
+        "reason": "Documented in DESIGN.md as a component-specific size or phone-width variant (documenter run 30 Sep 2026; 30px chart labels added 1 Oct 2026 for phone legibility)"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "30px",
+        "createdAt": "2026-10-01T06:48:17.125Z",
+        "reason": "Documented in DESIGN.md as a component-specific size or phone-width variant (documenter run 30 Sep 2026; 30px chart labels added 1 Oct 2026 for phone legibility)"
+      }
+    ]
+  }
 }

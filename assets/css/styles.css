@@ -427,6 +427,31 @@ p {
   transition-delay: 0.24s;
 }
 
+.grow-in .scores li:nth-child(4) .score-fill,
+.grow-in g:nth-of-type(4) .bar {
+  transition-delay: 0.36s;
+}
+
+.grow-in .scores li:nth-child(5) .score-fill,
+.grow-in g:nth-of-type(5) .bar {
+  transition-delay: 0.48s;
+}
+
+.grow-in .scores li:nth-child(6) .score-fill,
+.grow-in g:nth-of-type(6) .bar {
+  transition-delay: 0.60s;
+}
+
+.grow-in .scores li:nth-child(7) .score-fill,
+.grow-in g:nth-of-type(7) .bar {
+  transition-delay: 0.72s;
+}
+
+.grow-in .scores li:nth-child(8) .score-fill,
+.grow-in g:nth-of-type(8) .bar {
+  transition-delay: 0.84s;
+}
+
 /* Home: how to read the label */
 
 .label-guide {
@@ -1177,6 +1202,18 @@ select:focus {
 
   .faq-a {
     padding-right: 0;
+  }
+
+  .bar-label,
+  .bar-value {
+    font-size: 30px;
+  }
+}
+
+@media print {
+  .grow-ready .score-fill,
+  .grow-ready .bar {
+    transform: none;
   }
 }
 

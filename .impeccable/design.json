@@ -363,7 +363,7 @@
         "use": "Footnote superscripts (700)."
       },
       {
-        "value": "22px in a 640-unit viewBox",
+        "value": "22px in a 640-unit viewBox (30px under 600px)",
         "use": "D3 bar labels (700) and values (800), condensed; scales with the chart."
       }
     ]

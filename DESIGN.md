@@ -260,7 +260,7 @@ These sizes are tied to one component each and are not ramp steps for new text:
 - **1.35rem, 800 condensed:** score values in the verdict box.
 - **1rem, 800 normal width:** the findings-rail title.
 - **0.7em, 700:** footnote superscripts.
-- **22px in a 640-unit SVG viewBox:** D3 bar labels (700) and values (800), condensed. This scales with the chart.
+- **22px in a 640-unit SVG viewBox (30px under 600px):** D3 bar labels (700) and values (800), condensed. This scales with the chart. The larger size on phones keeps the rendered text at about 16px instead of 11px.
 
 ### Named Rules
 **The Width Sets Rank Rule.** Rank is expressed by width and weight, not by a second family. Condensed (width 72) at 800–900 for headlines, numerals and figures; normal width (100) for reading, questions and navigation. Do not add a display or mono face.
