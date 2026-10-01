@@ -4,6 +4,10 @@ A three-page website about household appliance energy use in Australia, built fo
 
 Author: Chung Hien Thong
 
+Repository: https://github.com/HienThong-vie/demonstration-1-COS30045
+
+Live site (Mercury): _add the URL after uploading (Exercise 0.3)._
+
 ## Pages
 
 | Page | File | What it contains |
@@ -37,7 +41,7 @@ Author: Chung Hien Thong
 Exercise 0.2
 - Three pages with a top navigation bar on every page
 - Power logo top-left, links back to Home
-- Hover effect on navigation links; current page marked with `aria-current="page"` and an underline
+- Hover effect on navigation links (deeper yellow fill); current page marked with `aria-current="page"` and a filled dark-brown tab
 - FAQ hidden by default, opened and closed with JavaScript (accordion)
 - All styling in `assets/css/styles.css`, no inline styles
 - Footer on every page with the current year (set by JavaScript), author name and GenAI acknowledgement
@@ -110,9 +114,11 @@ Each chart has a title that states the finding, a sentence or two of context, an
 
 **Ethics:** No brand or model is recommended. Bar charts start at zero. Small groups (for example, 17 small OLED models) are flagged so averages are not over-read.
 
-## Generative AI Reflection
+## AI Declaration
 
-This section is also the AI Declaration for Exercise 3.
+The declaration for Exercise 3 is the Generative AI Reflection below, written in the unit's format: introduction, tool, prompts, outputs, modifications, reflection and acknowledgement.
+
+## Generative AI Reflection
 
 **Introduction:** I used GenAI to speed up building the website so I could spend more time on the data processing and the story.
 
@@ -124,13 +130,26 @@ This section is also the AI Declaration for Exercise 3.
   - I asked Claude Code to review the Canvas requirements and rubric and plan the build.
   - It restructured the Televisions page into a data story and wrote `barchart.js` following the structure of Exercises 4.3 to 4.7.
   - It updated the About page and this README.
+- **Design and finishing:**
+  - Using the ui-ux-pro-max and Impeccable skills, Claude redesigned the look of all three pages as a consumer "test report", in colours sampled from the power logo. An independent AI reviewer checked the result, and its fixes were applied.
+  - It added the logo and changed the current-page navigation from an underline to a filled tab.
+  - It reviewed the site against the Canvas requirements, wrote `PROGRESS.md`, and published the code to GitHub in feature commits.
 - Each code file starts with a comment saying it was generated with Claude.
 
 **Prompts:**
 - "in this week 4 assignment, i have to build a website involved around exercised in previous weeks, there is already prototype of this website, can you review the canvas requirement again for this website and /architect the build-plan for this website to its fullest and match with all requirement, rubrics that are required in this assignment"
+- "can i see the live website first"
+- "/impeccable init"
+- "i have downloaded the website icon. what i need you to do next is that using approriate and suitable ui-ux-pro-max skill in its skill set and immpeccable plugin to even enhance the website UI design further"
+- "alright, please add the website icon and then also fix this styling, instead it highlight the section where we stay by darkening the bottom border, please use different way to highlight it instead of this way"
+- "please /review this and make a progress tracker file what have done, what still open, once all items in this progress checker is tick, the website is complete"
+- "have you push this website on its own repo ?"
+- "please make a new one: 1. demonstration-1-COS30045, 2. public, 3.few commits"
+- "for all the found issues above, fix all that you can fix right now, issues that need my action like KNIME or genAI declaration can left open for later"
+- Answers to Claude's multiple-choice questions: scope (Demo 1 plus the D3 chart), data source (my own KNIME work), audience (TV buyers), redesign depth, and the visual direction ("The Test Report").
 - _Add the Exercise 0.2 prompts here (copy them from the chat)._
 
-**Outputs received:** the HTML, CSS and JavaScript files listed above, a build plan, and draft wording for the data story and data sections.
+**Outputs received:** the HTML, CSS and JavaScript files listed above, a build plan, draft wording for the data story and data sections, the redesigned stylesheet, `PRODUCT.md`, `DESIGN.md` and `PROGRESS.md`.
 
 **What I changed or adapted after generation:** _Write what you changed yourself, e.g. checked the story numbers against my KNIME output, chart colours, wording, presets._
 
