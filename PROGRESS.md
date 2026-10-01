@@ -87,18 +87,19 @@ Put the data in the workflow's `data/` folder and read it "relative to current w
 - [x] `barchart.js` follows the exercise structure: `d3.csv` row conversion, sort, `scaleLinear` + `scaleBand`, `g` groups with `translate`, labels
 - [x] Responsive `viewBox` SVG, with an accessible title and a static-image fallback
 - [ ] **You:** open the Televisions page on Live Server with your real CSV and confirm the bars match your KNIME values
-- [ ] **Claude:** make the chart labels readable on phones; they are about 11px now **(R14)**
-- [ ] **Claude:** stop `barchart.js` throwing an error when the D3 CDN fails to load **(R15)**
+- [x] Chart labels readable on phones: about 16px at 390px wide, up from about 11px **(R14)**
+- [x] `barchart.js` checks that D3 loaded; if not, it logs a warning and keeps the static image, with no uncaught error **(R15)**
 
 ## 6. Clean-up found in the review
 
-- [ ] **Claude:** README line 40 still says the nav uses "an underline"; update it to the filled tab **(R8)**
-- [ ] **Claude:** add an explicit `## AI Declaration` heading to the README (Ex 3 wording) **(R10)**
-- [ ] **Claude:** add `width`/`height` to the chart `<img>` tags once the PNGs exist **(R16)**
-- [ ] **Claude (optional):**
-  - [ ] a print style so the grow-in bars are not empty on paper **(R17)**
-  - [ ] extend the bar stagger beyond 3 bars **(R17)**
-  - [ ] resolve the design-system font-size warnings **(R11)**
+- [x] README checklist now describes the filled-tab navigation **(R8)**
+- [x] README has an explicit `## AI Declaration` section (Ex 3 wording) **(R10)**
+- [ ] **Claude:** add `width`/`height` to the chart `<img>` tags once the PNGs exist. This is waiting on your KNIME PNGs. **(R16)**
+- [x] Print style: bars print at full length **(R17)**
+- [x] Bar grow-in stagger now covers up to 8 bars **(R17)**
+- [x] Design-system font-size warnings resolved: each size is documented in DESIGN.md and recorded as an exception, so the detector is clean **(R11)**
+- [x] About page no longer claims hosting that hasn't happened yet; it links the GitHub repo **(R5, text only)**
+- [x] README links the GitHub repo and lists this session's prompts (your Ex 0.2 prompts are still to add) **(R3, partial)**
 
 ## 7. GenAI declaration
 
@@ -160,3 +161,4 @@ Put the data in the workflow's `data/` folder and read it "relative to current w
 | 30 Sep 2026 | Logo added, palette matched to the logo, current-page nav changed from underline to a filled tab, focus ring made visible on yellow |
 | 30 Sep 2026 | `PRODUCT.md` and `DESIGN.md` (design system for the Weeks 5–6 charts) written |
 | 30 Sep 2026 | Site published to the public GitHub repo `demonstration-1-COS30045` in 5 feature commits |
+| 1 Oct 2026 | Review fixes: phone chart labels, D3 load guard, print and stagger styles, README nav and AI Declaration, About hosting text, design-system warnings cleared |
