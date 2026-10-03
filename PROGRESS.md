@@ -60,7 +60,7 @@ Put the data in the workflow's `data/` folder and read it "relative to current w
   - [ ] `brand_count.csv`: `brand,count`
   - [ ] `tech_by_size.csv`: `category,lcd,lcd_led,oled`
 - [ ] **You:** chart PNGs to `assets/img/charts/` **(R12)**:
-  - [ ] `size-histogram.png`
+  - [x] `size-histogram.png`: axis in inches (via a new `screensize_inch` Expression node), matches the page's inch-based data table
   - [ ] `size-vs-energy.png`
   - [ ] `size-category-cost.png`
   - [ ] `tech-by-size.png`
@@ -164,3 +164,4 @@ Put the data in the workflow's `data/` folder and read it "relative to current w
 | 1 Oct 2026 | Review fixes: phone chart labels, D3 load guard, print and stagger styles, README nav and AI Declaration, About hosting text, design-system warnings cleared |
 | 3 Oct 2026 | Calculator checked against the Ex 0.2 optional JavaScript brief and polished |
 | 3 Oct 2026 | Exercise 3 storyboard built in FigJam (7 user-journey frames) and saved to docs/storyboard.png |
+| 3 Oct 2026 | First chart PNG attached (size-histogram.png); caught and fixed a cm-vs-inches mismatch in KNIME_exercise_2 |
