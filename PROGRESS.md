@@ -61,7 +61,7 @@ Put the data in the workflow's `data/` folder and read it "relative to current w
   - [ ] `tech_by_size.csv`: `category,lcd,lcd_led,oled`
 - [ ] **You:** chart PNGs to `assets/img/charts/` **(R12)**:
   - [x] `size-histogram.png`: axis in inches (via a new `screensize_inch` Expression node), matches the page's inch-based data table
-  - [ ] `size-vs-energy.png`
+  - [x] `size-vs-energy.png`: screensize_inch vs labelled energy, filtered to Available + sold in Australia (4,508). Worth a quick check that the Scatter Plot node's row cap is at least 4,508 so no points are silently dropped
   - [ ] `size-category-cost.png`
   - [ ] `tech-by-size.png`
   - [ ] `brand-count.png`
@@ -165,3 +165,4 @@ Put the data in the workflow's `data/` folder and read it "relative to current w
 | 3 Oct 2026 | Calculator checked against the Ex 0.2 optional JavaScript brief and polished |
 | 3 Oct 2026 | Exercise 3 storyboard built in FigJam (7 user-journey frames) and saved to docs/storyboard.png |
 | 3 Oct 2026 | First chart PNG attached (size-histogram.png); caught and fixed a cm-vs-inches mismatch in KNIME_exercise_2 |
+| 3 Oct 2026 | Second chart attached (size-vs-energy.png): new filtered branch in KNIME_exercise_2 feeds a scatter plot of size vs energy |
