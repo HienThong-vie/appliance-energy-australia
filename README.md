@@ -86,7 +86,7 @@ The D3 chart loads a CSV file, so the pages need to be served over HTTP. Use the
 
 Each chart has a title that states the finding, a sentence or two of context, and a caption with the source.
 
-**Storyboard:** see `docs/storyboard.png`.
+**Storyboard:** see `docs/storyboard.png`, 7 frames following the reader through the Home page, the method, each finding and the calculator. Editable board: [FigJam](https://www.figma.com/board/v2rI7qZGKGD1WLEFM16USb).
 
 ## About the data
 
@@ -149,7 +149,7 @@ The declaration for Exercise 3 is the Generative AI Reflection below, written in
 - Answers to Claude's multiple-choice questions: scope (Demo 1 plus the D3 chart), data source (my own KNIME work), audience (TV buyers), redesign depth, and the visual direction ("The Test Report").
 - _Add the Exercise 0.2 prompts here (copy them from the chat)._
 
-**Outputs received:** the HTML, CSS and JavaScript files listed above, a build plan, draft wording for the data story and data sections, the redesigned stylesheet, `PRODUCT.md`, `DESIGN.md` and `PROGRESS.md`.
+**Outputs received:** the HTML, CSS and JavaScript files listed above, a build plan, draft wording for the data story and data sections, the redesigned stylesheet, `PRODUCT.md`, `DESIGN.md` and `PROGRESS.md`, and the Exercise 3 storyboard (`docs/storyboard.png`), built in FigJam with Claude from the site's existing data story.
 
 **What I changed or adapted after generation:** _Write what you changed yourself, e.g. checked the story numbers against my KNIME output, chart colours, wording, presets._
 

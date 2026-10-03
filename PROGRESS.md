@@ -75,7 +75,7 @@ Put the data in the workflow's `data/` folder and read it "relative to current w
 - [x] A data-table alternative for every chart
 - [x] README sections: Data Story, About the data (source, processing, privacy, accuracy and limitations, ethics)
 - [x] About page covers the same data topics
-- [ ] **You:** draw the storyboard (FigJam, draw.io or PowerPoint) and save it as `docs/storyboard.png` **(R4)**
+- [x] Storyboard built in FigJam ([board](https://www.figma.com/board/v2rI7qZGKGD1WLEFM16USb)) and saved as `docs/storyboard.png` **(R4)**. 7 user-journey frames, grouped Beginning/Middle/End, following the reader through Home, the method and each finding to the calculator. Made with Claude; declared in the README
 - [ ] **You then Claude:** check every number on the site against *your* KNIME output, and have Claude update any that differ **(R13)**. This covers:
   - [ ] Home verdict box ($52 / $134 / $247) and model count (4,508)
   - [ ] Finding text and all 5 data tables on the Televisions page, including the histogram bins (they may need to match KNIME's bins)
@@ -163,3 +163,4 @@ Put the data in the workflow's `data/` folder and read it "relative to current w
 | 30 Sep 2026 | Site published to the public GitHub repo `demonstration-1-COS30045` in 5 feature commits |
 | 1 Oct 2026 | Review fixes: phone chart labels, D3 load guard, print and stagger styles, README nav and AI Declaration, About hosting text, design-system warnings cleared |
 | 3 Oct 2026 | Calculator checked against the Ex 0.2 optional JavaScript brief and polished |
+| 3 Oct 2026 | Exercise 3 storyboard built in FigJam (7 user-journey frames) and saved to docs/storyboard.png |
