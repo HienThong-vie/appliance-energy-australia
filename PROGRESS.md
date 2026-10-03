@@ -23,7 +23,7 @@ Last reviewed: 30 Sep 2026. **(R#)** refers to the numbered finding in that revi
 - [x] Footer on every page: current year (JavaScript), your name, GenAI acknowledgement
 - [x] Sensible folder structure (`assets/css`, `assets/js`, `assets/img`, `assets/data`)
 - [x] Logo file in place (`assets/img/PowerIcon.png`)
-- [x] Optional calculator: inputs, at least two calculations, results replaced and not duplicated, validation next to each field, works after refresh
+- [x] Optional calculator: inputs, at least two calculations, results replaced and not duplicated, validation next to each field, works after refresh. Checked against the Canvas "Optional JavaScript Challenge" brief on 3 Oct 2026; polished (typing your own wattage switches to "Other", label grammar, hours step 0.25)
 
 ## 2. Git and GitHub (Ex 0.1 / 0.2)
 
@@ -162,3 +162,4 @@ Put the data in the workflow's `data/` folder and read it "relative to current w
 | 30 Sep 2026 | `PRODUCT.md` and `DESIGN.md` (design system for the Weeks 5–6 charts) written |
 | 30 Sep 2026 | Site published to the public GitHub repo `demonstration-1-COS30045` in 5 feature commits |
 | 1 Oct 2026 | Review fixes: phone chart labels, D3 load guard, print and stagger styles, README nav and AI Declaration, About hosting text, design-system warnings cleared |
+| 3 Oct 2026 | Calculator checked against the Ex 0.2 optional JavaScript brief and polished |

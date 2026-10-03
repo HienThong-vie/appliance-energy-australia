@@ -1,12 +1,12 @@
 // Initial version generated with Claude (Anthropic). See README > Generative AI Reflection.
 
 const PRESETS = {
-  tvSmall: { label: "small TV", watts: 41, hours: 5 },
-  tvMedium: { label: "medium TV", watts: 106, hours: 5 },
-  tvLarge: { label: "large TV", watts: 197, hours: 5 },
-  computer: { label: "desktop computer", watts: 100, hours: 4 },
-  microwave: { label: "microwave", watts: 1100, hours: 0.25 },
-  custom: { label: "appliance", watts: null, hours: null }
+  tvSmall: { label: "a small TV", watts: 41, hours: 5 },
+  tvMedium: { label: "a medium TV", watts: 106, hours: 5 },
+  tvLarge: { label: "a large TV", watts: 197, hours: 5 },
+  computer: { label: "a desktop computer", watts: 100, hours: 4 },
+  microwave: { label: "a microwave", watts: 1100, hours: 0.25 },
+  custom: { label: "your appliance", watts: null, hours: null }
 };
 
 const DAYS_PER_YEAR = 365;
@@ -27,9 +27,9 @@ const fields = {
     error: document.getElementById("hours-error"),
     name: "number of hours",
     emptyText: "Enter the hours used per day.",
-    min: 0.1,
+    min: 0.25,
     max: 24,
-    rangeText: "between 0.1 and 24 hours"
+    rangeText: "between 0.25 and 24 hours"
   },
   price: {
     input: document.getElementById("price"),
@@ -153,6 +153,12 @@ function applyPreset() {
   }
 }
 
+function markCustom() {
+  if (Number(fields.watts.input.value) !== PRESETS[applianceSelect.value].watts) {
+    applianceSelect.value = "custom";
+  }
+}
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   hasSubmitted = true;
@@ -162,6 +168,8 @@ form.addEventListener("submit", (event) => {
 form.addEventListener("input", (event) => {
   if (event.target === applianceSelect) {
     applyPreset();
+  } else if (event.target === fields.watts.input) {
+    markCustom();
   }
 
   if (hasSubmitted) {
