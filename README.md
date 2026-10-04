@@ -1,6 +1,6 @@
 # Appliance Energy Australia
 
-A three-page website about household appliance energy use in Australia, built for COS30045 Data Visualisation. It started as Exercise 0.2, was extended into the Exercise 3 data story about television running costs, and includes the Week 4 D3 bar chart (Exercises 4.3 to 4.7).
+A three-page website about household appliance energy use in Australia, built for COS30045 Data Visualisation. It started as Exercise 0.2, was extended into the Exercise 3 data story about television running costs, and includes D3 bar charts built with the Week 4 pattern (Exercises 4.3 to 4.7).
 
 Author: Chung Hien Thong
 
@@ -13,7 +13,7 @@ Live site (Mercury): _add the URL after uploading (Exercise 0.3)._
 | Page | File | What it contains |
 | --- | --- | --- |
 | Home | `index.html` | Introduction, a running-cost example from the data, how to read the Energy Rating Label, FAQ accordion |
-| Televisions | `televisions.html` | Data story in four steps (size distribution, size vs energy, D3 cost chart, screen type), takeaways, brand context, Appliance Energy Calculator |
+| Televisions | `televisions.html` | Data story in four steps (size distribution, size vs energy, cost by size group, star rating), takeaways, brand context, Appliance Energy Calculator |
 | About Us | `about.html` | Audience, data source, processing, privacy, accuracy and limitations, ethics |
 
 ## Folder structure
@@ -26,10 +26,11 @@ Live site (Mercury): _add the URL after uploading (Exercise 0.3)._
   assets/
     css/styles.css       all styling (one external stylesheet)
     js/main.js           footer year + FAQ accordion (all pages)
-    js/barchart.js       D3 bar chart of yearly cost by screen size (Televisions page)
+    js/barchart.js       D3 bar chart of yearly cost by screen size; switched off on the page (Finding 3 shows the KNIME image)
     js/report.js         bars grow in when scrolled into view; findings rail marks the current finding
+    js/calcchart.js      D3 chart in the calculator results: your cost beside the average small, medium and large TV
     js/calculator.js     Appliance Energy Calculator (Televisions page)
-    data/                CSV files exported from KNIME for the D3 chart
+    data/                CSV files exported from KNIME for the D3 charts
     img/PowerIcon.png    power logo provided on Canvas
     img/charts/          chart images exported from KNIME
   docs/storyboard.png    Exercise 3 storyboard
@@ -66,7 +67,7 @@ Exercises 4.3 to 4.7
 
 ## Running locally
 
-The D3 chart loads a CSV file, so the pages need to be served over HTTP. Use the Live Server extension in VS Code (or `python -m http.server` in this folder) and open `index.html`. All paths are relative, so the same files work when uploaded to Mercury (see Exercise 0.3).
+The calculator's D3 chart loads a CSV file, so the pages need to be served over HTTP. Use the Live Server extension in VS Code (or `python -m http.server` in this folder) and open `index.html`. All paths are relative, so the same files work when uploaded to Mercury (see Exercise 0.3).
 
 ## Data Story
 
@@ -74,15 +75,15 @@ The D3 chart loads a CSV file, so the pages need to be served over HTTP. Use the
 
 **What they want to know:**
 1. Does a bigger screen cost noticeably more to run?
-2. Are premium OLED screens more power hungry than LED screens?
+2. Does the star rating on the label actually predict running cost?
 3. How can they compare models when they buy?
 
 **How the story is told:** The Televisions page moves from context to answer to action.
 1. What sizes are on the market (histogram)
 2. Energy use rises with size (scatter plot)
-3. What that means in dollars per year for small, medium and large TVs (D3 bar chart)
-4. Screen type matters much less than size (grouped bar chart)
-5. Three takeaways, then the calculator so readers can try their own numbers
+3. What that means in dollars per year for small, medium and large TVs (bar chart made in KNIME)
+4. The star rating is a reliable guide to running cost (bar chart made in KNIME)
+5. Three takeaways, then the calculator so readers can try their own numbers, with a D3 chart comparing their cost with the average TVs
 
 Each chart has a title that states the finding, a sentence or two of context, and a caption with the source.
 
@@ -100,7 +101,7 @@ Each chart has a title that states the finding, a sentence or two of context, an
 - GroupBy brand, then Sorter (brand counts)
 - Expression nodes to convert screen size from cm to inches and create a size category (small ≤ 43", medium 44 to 65", large ≥ 66")
 - Expression node for an example yearly cost (labelled kWh × $0.33)
-- GroupBy and Pivot to get averages by size category and screen technology
+- GroupBy to get averages by size category, and by star rating (`Star2`; the `Star` column is almost empty)
 - CSV Writer (quote values: never) to export the tables in `assets/data/`
 
 **Privacy:** The data describes products, not people. There is no personal information, only brand and model details submitted by registrants.
@@ -112,7 +113,7 @@ Each chart has a title that states the finding, a sentence or two of context, an
 - The data counts models, not sales.
 - The electricity price is an example; tariffs vary by state and retailer.
 
-**Ethics:** No brand or model is recommended. Bar charts start at zero. Small groups (for example, 17 small OLED models) are flagged so averages are not over-read.
+**Ethics:** No brand or model is recommended. Bar charts start at zero. Small groups (for example, 8 models at 8 stars) are flagged so averages are not over-read.
 
 ## AI Declaration
 

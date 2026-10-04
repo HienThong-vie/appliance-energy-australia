@@ -8,7 +8,7 @@ web
 
 ## Users
 
-**Primary: Australian households choosing a new television.** They are not energy experts. They compare models in a shop or online, care about purchase price and the power bill, and want to know whether a bigger or more premium screen will noticeably raise their running costs. Every design decision serves this reader first.
+**Primary: Australian households choosing a new television.** They are not energy experts. They compare models in a shop or online, care about purchase price and the power bill, and want to know whether a bigger screen, or a low star rating, will noticeably raise their running costs. Every design decision serves this reader first.
 
 **Constraint audience: COS30045 tutors.** Tutors assess the site in face-to-face interviews (Demonstration 1 in Week 4, Demonstration 2 in Week 7). They are not the reader the site is designed for, but their needs are hard constraints:
 - every exercise requirement must be visibly present;
@@ -16,7 +16,7 @@ web
 
 ## Product Purpose
 
-A small public website that turns the Australian Government's appliance energy registration data into clear, honest visualisations. The main surface is a data story that answers one question for TV buyers: does a bigger screen, or an OLED screen, cost much more to run?
+A small public website that turns the Australian Government's appliance energy registration data into clear, honest visualisations. The main surface is a data story that answers one question for TV buyers: does a bigger screen, or a low star rating, cost much more to run?
 
 It is also the author's coursework for COS30045 Data Visualisation at Swinburne University of Technology:
 - Exercise 0.2: website
@@ -25,7 +25,7 @@ It is also the author's coursework for COS30045 Data Visualisation at Swinburne 
 - later D3 exercises
 
 **Success means:**
-- a buyer leaves knowing that screen size drives running cost far more than screen type, and how to compare models;
+- a buyer leaves knowing that screen size and star rating both predict running cost, and how to compare models;
 - the author can demonstrate and justify every part in the interviews.
 
 ## Positioning
@@ -68,7 +68,7 @@ Built on the actual Energy Rating registration data: every model available in Au
 - **Findings** (checked from the raw data, still to be confirmed against the author's KNIME output):
   - about 4,500 models are available in Australia;
   - average yearly cost at $0.33/kWh: small ≈ $52, medium ≈ $134, large ≈ $247;
-  - OLED is not consistently more power hungry than LED at the same size;
+  - the star rating on the label tracks real energy use closely (1,202 kWh/yr at 1 star down to 166 kWh/yr at 8 stars), and is barely related to screen size;
   - Samsung, Kogan and LG hold more than half of all models.
 - **Still to be supplied by the author:**
   - the logo file, the KNIME chart images and the exported CSVs;

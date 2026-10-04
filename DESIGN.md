@@ -274,11 +274,11 @@ A single centred container (max 1120px, 1.25rem side gutters) holds every page. 
 Grids are asymmetric two-column splits that collapse to one column:
 - Home cover: 7fr text, 5fr verdict box, 3.5rem gap.
 - Section head beside content: 1fr to 2fr, 3rem gap.
-- Televisions report: a 15rem sticky findings rail beside the article, 3.5rem gap; collapses at 960px and the rail becomes static.
+- Televisions report header: 7fr headline/standfirst, 5fr "In this report" panel (reuses the Home cover grid), 3.5rem gap. Not sticky; the article runs full width below.
 - Findings: a 4.5rem numeral column beside the finding body; stacks under 600px.
-- Calculator: 1.2fr form beside 1fr results. About: 2fr prose beside a 1fr sticky info panel.
+- Calculator: the form spans the full width (appliance beside power, hours beside price; field rows stack under 600px), with the results frame full width below it. Inside the results, the total and comparison chart sit beside the figures (1fr / 1fr, 3.5rem gap) and stack at 860px. About: 2fr prose beside a 1fr sticky info panel.
 
-Breakpoints are 960px (report rail), 860px (all two-column splits) and 600px (masthead stacks, nav tabs tighten, panel padding tightens to 1.25rem, field rows stack). Spacing steps in use are 0.75rem, 1.25rem, 1.75rem, 2.25rem, 3.5rem and 4.5rem.
+Breakpoints are 960px (report article top padding), 860px (all two-column splits, including the Televisions report header) and 600px (masthead stacks, nav tabs tighten, panel padding tightens to 1.25rem, field rows stack). Spacing steps in use are 0.75rem, 1.25rem, 1.75rem, 2.25rem, 3.5rem and 4.5rem.
 
 ### Named Rules
 **The Report Order Rule.** Pages run verdict, evidence, method: the claim and its figures come first, the charts and tables second, the method and limitations in plain view after (or beside) them.
@@ -288,8 +288,8 @@ Breakpoints are 960px (report rail), 860px (all two-column splits) and 600px (ma
 The system is flat. There are no box shadows anywhere. Depth and grouping come from three devices only: bark rules of graded weight, butter bands behind whole regions, and bordered white panels sitting on butter or white.
 
 The rule ladder, from heaviest to lightest:
-- **Verdict frame** (4px solid bark): the verdict box and calculator results only.
-- **Report rule** (3px solid bark): under the masthead, cover and report header; over the footer, FAQ, label guide, findings rail, prose h2s, info panel and imperative lines.
+- **Verdict frame** (4px solid bark): the verdict box, the findings rail, and calculator results.
+- **Report rule** (3px solid bark): under the masthead, cover and report header; over the footer, FAQ, label guide, prose h2s, info panel and imperative lines.
 - **Panel border** (2px solid bark): method panel, calculator form, inputs, buttons, table-head underline, the divider before the rail's extra links; 2px solid ink over chart figures.
 - **Byline rule** (1px solid bark): under the cover's call to action.
 - **Hairline** (1px solid warm hairline): row dividers.
@@ -313,7 +313,7 @@ Solid, square and plain, like a form on a printed report.
 - **Quiet:** transparent with a bark border and deep-bark text; soft-butter fill on hover. Used as the second action beside a primary.
 
 ### Inputs / Fields
-- **Style:** white field, 2px bark border, square, 48px minimum height, label above in 700. Units (W, hrs, $/kWh) sit inside the right edge in muted 600; native number spinners are removed.
+- **Style:** white field, 2px bark border, square, 48px height (line-height 1.25, so selects and number inputs match side by side), label above in 700. Units (W, hrs, $/kWh) sit inside the right edge in muted 600; native number spinners are removed.
 - **Focus:** 3px deep-bark outline at 1px offset.
 - **Error:** border turns error rust and a 0.9rem 600 message in error rust appears below; empty error slots take no space.
 
@@ -325,10 +325,13 @@ Every focusable element gets a 3px solid deep-bark outline at 3px offset (inputs
 - **Hover:** the tab fills deep butter and the text turns ink, over 0.2s. No underline.
 - **Current page:** a solid deep-bark tab with butter text at 800 (8.2:1). This is a confirmed user decision and binding: the current page is shown by a filled tab, not an underline.
 - **Mobile:** under 600px the masthead stacks, brand above links, and tab padding tightens to 0.75rem 0.8rem.
-- **Findings rail:** a sticky numbered contents list under a 3px rule. Numbers are bark condensed 800 counters; a 2px bark rule separates the numbered findings from the extra links. On wide screens the section in view gets a butter fill and bold ink text.
+- **Findings rail:** a numbered contents list set in a verdict-frame panel (4px bark border, white) beside the report headline, not sticky. Numbers are bark condensed 800 counters; a 2px bark rule separates the numbered findings from the extra links. On wide screens the section in view gets a butter fill and bold ink text.
 
 ### Verdict Box (signature)
 The report's scored summary. A white panel with a 4px bark frame and 1.75rem padding, set on the butter cover. Inside: a condensed headline verdict, a one-line lead, then score rows (label, bar, value) divided by hairlines. Bars are bark; the one being discussed is bolt. The calculator results reuse the same frame.
+
+### Calculator Comparison Chart
+A small D3 horizontal bar chart inside the calculator results frame, under the yearly total. Bars are bark; the reader's own estimate is bolt. The dollar value sits at each bar's end. Labels are 18px in a 400-wide viewBox, raised to 21px under 600px. The chart is capped at 440px wide, so labels render at about 20px on desktop and 15px on a 390px phone. There is no motion, because it redraws on every keystroke. The caption doubles as the legend ("Orange: your estimate. Brown: …"). It is hidden for non-TV presets, where a fine-print note replaces it.
 
 ### Method Panel
 A boxed "How we tested" panel: white, 2px bark border, 1.75rem padding, with a two-column definition list (bark labels) over hairlines and a fine-print link to the full method.
