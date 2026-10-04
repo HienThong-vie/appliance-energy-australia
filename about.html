@@ -46,14 +46,14 @@
           <p>Energy labels contain useful information, but the numbers are easy to overlook in a shop. This site aims to show that information in a way people can explore, so they can compare appliances and understand what their choices mean for their power bill.</p>
 
           <h2>Who it is for</h2>
-          <p>The Televisions page is written for Australian households choosing a new TV. They want to know whether a bigger or more premium screen will noticeably increase their power bill, and how to compare models in the shop.</p>
+          <p>The Televisions page is written for Australian households choosing a new TV. They want to know whether a bigger screen, or a low star rating, will noticeably increase their power bill, and how to compare models in the shop.</p>
 
           <h2>How we tested</h2>
           <h3>Source</h3>
           <p>The site uses appliance registration data published by the Australian Government through the <a href="https://www.energyrating.gov.au/">Energy Rating</a> program. The television data set is the extract dated 15 February 2026. Each row is one registered model, with its screen size, screen technology, star rating and labelled energy consumption.</p>
 
           <h3>Processing</h3>
-          <p>The data was cleaned and summarised in KNIME. Only models marked as available and sold in Australia were kept, and brand names that appeared in more than one form were merged. Screen size was converted from centimetres to inches and grouped into small (43 inches or less), medium (44 to 65) and large (66 or more). Average energy use and an example yearly cost were then calculated for each group and screen type, and exported as CSV files for the charts.</p>
+          <p>The data was cleaned and summarised in KNIME. Only models marked as available and sold in Australia were kept, and brand names that appeared in more than one form were merged. Screen size was converted from centimetres to inches and grouped into small (43 inches or less), medium (44 to 65) and large (66 or more). Average energy use and an example yearly cost were then calculated for each size group and star rating, and exported as CSV files for the charts.</p>
 
           <h3>Privacy</h3>
           <p>The data set describes products, not people. It contains no personal information, only brand and model details submitted by the companies that register their televisions.</p>
@@ -65,7 +65,7 @@
           <p>The site does not recommend any brand or model. Charts start at zero and use the same scale within each chart so differences are not exaggerated. Averages are shown with the number of models behind them where the group is small.</p>
 
           <h2>How it is built</h2>
-          <p>The pages use HTML, a single external CSS file and plain JavaScript. Charts are drawn with the D3.js library. The code is kept in a public <a href="https://github.com/HienThong-vie/demonstration-1-COS30045">GitHub repository</a>, and the site is built to be hosted on Swinburne's Mercury web server.</p>
+          <p>The pages use HTML, a single external CSS file and plain JavaScript. The findings charts were made in KNIME and exported as images; the calculator's comparison chart is drawn live with the D3.js library. The code is kept in a public <a href="https://github.com/HienThong-vie/demonstration-1-COS30045">GitHub repository</a>, and the site is built to be hosted on Swinburne's Mercury web server.</p>
         </div>
 
         <aside class="info-panel" aria-labelledby="details-title">

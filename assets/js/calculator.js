@@ -1,9 +1,9 @@
 // Initial version generated with Claude (Anthropic). See README > Generative AI Reflection.
 
 const PRESETS = {
-  tvSmall: { label: "a small TV", watts: 41, hours: 5 },
-  tvMedium: { label: "a medium TV", watts: 106, hours: 5 },
-  tvLarge: { label: "a large TV", watts: 197, hours: 5 },
+  tvSmall: { label: "a small TV", watts: 43, hours: 5 },
+  tvMedium: { label: "a medium TV", watts: 111, hours: 5 },
+  tvLarge: { label: "a large TV", watts: 205, hours: 5 },
   computer: { label: "a desktop computer", watts: 100, hours: 4 },
   microwave: { label: "a microwave", watts: 1100, hours: 0.25 },
   custom: { label: "your appliance", watts: null, hours: null }
@@ -102,7 +102,7 @@ function setKwh(id, value) {
   document.getElementById(id).innerHTML = `${kwhFormat.format(value)}<span>kWh</span>`;
 }
 
-function showResults(result) {
+function showResults(result, values) {
   document.getElementById("result-appliance").textContent = PRESETS[applianceSelect.value].label;
   document.getElementById("result-yearly-cost").textContent = moneyFormat.format(result.yearlyCost);
   document.getElementById("result-monthly-cost").textContent = moneyFormat.format(result.monthlyCost);
@@ -112,6 +112,10 @@ function showResults(result) {
 
   emptyMessage.hidden = true;
   output.hidden = false;
+
+  if (typeof drawComparison === "function") {
+    drawComparison(result, values, applianceSelect.value);
+  }
 }
 
 function showInvalid() {
@@ -138,7 +142,7 @@ function update() {
   }
 
   if (isValid) {
-    showResults(calculate(values.watts, values.hours, values.price));
+    showResults(calculate(values.watts, values.hours, values.price), values);
   } else {
     showInvalid();
   }

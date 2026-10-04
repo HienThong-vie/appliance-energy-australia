@@ -322,6 +322,10 @@ p {
   padding: 3.5rem 0 3rem;
 }
 
+.report-head .cover-grid {
+  align-items: start;
+}
+
 .report-head .standfirst {
   margin-bottom: 0;
 }
@@ -558,17 +562,12 @@ p {
 
 .report-layout {
   padding-top: 3.5rem;
-  display: grid;
-  grid-template-columns: 15rem minmax(0, 1fr);
-  gap: 3.5rem;
-  align-items: start;
 }
 
 .rail {
-  position: sticky;
-  top: 1.5rem;
-  padding: 1.25rem 0 0;
-  border-top: var(--rule);
+  padding: 1.75rem;
+  border: 4px solid var(--bark);
+  background: var(--paper);
 }
 
 .rail-title {
@@ -845,9 +844,7 @@ th.num {
 
 .calc {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
   gap: 2rem;
-  align-items: start;
 }
 
 .calc-form {
@@ -889,6 +886,7 @@ select {
   background: var(--paper);
   color: var(--ink);
   font: inherit;
+  line-height: 1.25;
 }
 
 input:focus,
@@ -970,8 +968,35 @@ select:focus {
   color: var(--bolt-ink);
 }
 
+.results-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.calc-chart,
+.calc-chart-note {
+  margin: 1.25rem 0 0;
+}
+
+/* SVG text scales with the chart's width, so cap it to keep labels near 18px. */
+.calc-chart .responsive-svg-container {
+  max-width: 440px;
+  margin-left: 0;
+}
+
+.calc-chart figcaption {
+  margin-top: 0.5rem;
+}
+
+.calc-chart .bar-label,
+.calc-chart .bar-value {
+  font-size: 18px;
+}
+
 .figures {
-  margin: 1.25rem 0;
+  margin: 0 0 1.25rem;
 }
 
 .figures div {
@@ -1102,27 +1127,14 @@ select:focus {
 
 @media (max-width: 960px) {
   .report-layout {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-
-  .report-layout {
     padding-top: 2.5rem;
-  }
-
-  .rail {
-    position: static;
-  }
-
-  .method {
-    margin-top: 2rem;
   }
 }
 
 @media (max-width: 860px) {
   .cover-grid,
   .split,
-  .calc,
+  .results-grid,
   .about-grid {
     grid-template-columns: 1fr;
     gap: 2.25rem;
@@ -1198,6 +1210,11 @@ select:focus {
   .field-row {
     grid-template-columns: 1fr;
     gap: 0;
+  }
+
+  .calc-chart .bar-label,
+  .calc-chart .bar-value {
+    font-size: 21px;
   }
 
   .faq-a {
