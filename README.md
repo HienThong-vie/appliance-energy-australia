@@ -42,7 +42,7 @@ Live site (Mercury): _add the URL after uploading (Exercise 0.3)._
 Exercise 0.2
 - Three pages with a top navigation bar on every page
 - Power logo top-left, links back to Home
-- Hover effect on navigation links (deeper yellow fill); current page marked with `aria-current="page"` and a filled dark-brown tab
+- Hover effect on navigation links (deep butter fill); current page marked with `aria-current="page"` and a filled dark-brown tab
 - FAQ hidden by default, opened and closed with JavaScript (accordion)
 - All styling in `assets/css/styles.css`, no inline styles
 - Footer on every page with the current year (set by JavaScript), author name and GenAI acknowledgement
@@ -135,6 +135,7 @@ The declaration for Exercise 3 is the Generative AI Reflection below, written in
   - Using the ui-ux-pro-max and Impeccable skills, Claude redesigned the look of all three pages as a consumer "test report", in colours sampled from the power logo. An independent AI reviewer checked the result, and its fixes were applied.
   - It added the logo and changed the current-page navigation from an underline to a filled tab.
   - It reviewed the site against the Canvas requirements, wrote `PROGRESS.md`, and published the code to GitHub in feature commits.
+  - Later, I installed the shadcn/ui skill and asked Claude to make the design cleaner and more modern. The site stayed plain HTML, CSS and JavaScript; Claude recreated the shadcn/ui look (tokens, cards, buttons, tabs, accordion, tables) in `styles.css`, changed the font to Geist and rewrote `DESIGN.md`.
 - Each code file starts with a comment saying it was generated with Claude.
 
 **Prompts:**
@@ -147,6 +148,8 @@ The declaration for Exercise 3 is the Generative AI Reflection below, written in
 - "have you push this website on its own repo ?"
 - "please make a new one: 1. demonstration-1-COS30045, 2. public, 3.few commits"
 - "for all the found issues above, fix all that you can fix right now, issues that need my action like KNIME or genAI declaration can left open for later"
+- "please pull this skill https://github.com/shadcn-ui/ui globally that apply for this project and every project in the future"
+- "alright, now please use this skill set and redesign the website for cleaner, modern"
 - Answers to Claude's multiple-choice questions: scope (Demo 1 plus the D3 chart), data source (my own KNIME work), audience (TV buyers), redesign depth, and the visual direction ("The Test Report").
 - _Add the Exercise 0.2 prompts here (copy them from the chat)._
 

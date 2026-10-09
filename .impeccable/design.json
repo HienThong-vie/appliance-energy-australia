@@ -1,338 +1,346 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-30T12:00:00Z",
+  "generatedAt": "2026-10-09T00:00:00Z",
   "title": "Design System: Appliance Energy Australia",
   "extensions": {
     "colorMeta": {
-      "butter": {
+      "background": {
+        "role": "neutral",
+        "displayName": "Background",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#222222",
+          "#3a3a3a",
+          "#555555",
+          "#717171",
+          "#959595",
+          "#bebebe",
+          "#ebebeb"
+        ],
+        "note": "Page ground and every card."
+      },
+      "foreground": {
+        "role": "neutral",
+        "displayName": "Foreground",
+        "canonical": "oklch(21.6% 0.006 56.0)",
+        "tonalRamp": [
+          "#0d0b09",
+          "#24211f",
+          "#3d3a37",
+          "#585452",
+          "#74716e",
+          "#989492",
+          "#c1bdba",
+          "#eeeae7"
+        ],
+        "note": "Headings, body text, chart values."
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "canonical": "oklch(97.0% 0.001 106.4)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#222221",
+          "#3a3a3a",
+          "#555554",
+          "#717171",
+          "#959594",
+          "#bebebd",
+          "#ebebea"
+        ],
+        "note": "Nav track, method tiles, score tracks, rail counters."
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "canonical": "oklch(98.5% 0.001 106.4)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#222221",
+          "#3a3a3a",
+          "#555554",
+          "#717171",
+          "#959594",
+          "#bebebd",
+          "#ebebea"
+        ],
+        "note": "Calculator band, table heads, row hover, footer."
+      },
+      "muted-foreground": {
+        "role": "neutral",
+        "displayName": "Muted Foreground",
+        "canonical": "oklch(50.8% 0.014 67.5)",
+        "tonalRamp": [
+          "#0f0a06",
+          "#26201b",
+          "#403933",
+          "#5b544d",
+          "#777069",
+          "#9b948c",
+          "#c4bcb4",
+          "#f2eae1"
+        ],
+        "note": "Secondary text. 5.8:1 on white, 5.3:1 on muted."
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Border",
+        "canonical": "oklch(92.3% 0.003 48.7)",
+        "tonalRamp": [
+          "#0c0b0a",
+          "#232121",
+          "#3c3a39",
+          "#565554",
+          "#737170",
+          "#979594",
+          "#bfbdbc",
+          "#edebea"
+        ],
+        "note": "Card borders and row dividers."
+      },
+      "input": {
+        "role": "neutral",
+        "displayName": "Input Border",
+        "canonical": "oklch(64.7% 0.013 67.6)",
+        "tonalRamp": [
+          "#0f0a06",
+          "#26211b",
+          "#3f3933",
+          "#5a544e",
+          "#77706a",
+          "#9b948d",
+          "#c4bcb5",
+          "#f1eae2"
+        ],
+        "note": "3.3:1 on white, meeting the 3:1 outline contrast for fields."
+      },
+      "primary": {
+        "role": "primary",
+        "displayName": "Primary (Deep Bark)",
+        "canonical": "oklch(37.9% 0.042 76.0)",
+        "tonalRamp": [
+          "#130900",
+          "#2d1f08",
+          "#473821",
+          "#63523b",
+          "#806f56",
+          "#a59279",
+          "#cebba0",
+          "#fce8cd"
+        ],
+        "note": "Logo outline darkened. Primary buttons, current nav tab, focus ring. 10:1 with white."
+      },
+      "chart": {
+        "role": "primary",
+        "displayName": "Chart (Bark)",
+        "canonical": "oklch(52.6% 0.058 78.6)",
+        "tonalRamp": [
+          "#120900",
+          "#2f1e00",
+          "#4b3714",
+          "#67512f",
+          "#846e4b",
+          "#a9916d",
+          "#d2ba94",
+          "#ffe8c5"
+        ],
+        "note": "Sampled exactly from the logo outline. Default bars and score fills."
+      },
+      "accent": {
         "role": "secondary",
-        "displayName": "Butter Yellow",
+        "displayName": "Accent (Soft Butter)",
+        "canonical": "oklch(96.5% 0.045 96.2)",
+        "tonalRamp": [
+          "#0f0b00",
+          "#282105",
+          "#413b1e",
+          "#5d5538",
+          "#797254",
+          "#9d9676",
+          "#c6be9e",
+          "#f4ecca"
+        ],
+        "note": "Hover fills, badges, takeaway alerts, current rail item."
+      },
+      "accent-strong": {
+        "role": "secondary",
+        "displayName": "Butter",
         "canonical": "oklch(92.8% 0.087 96.3)",
         "tonalRamp": [
-          "#140900",
-          "#312200",
-          "#4d3f00",
-          "#6c5d1a",
-          "#8f8040",
-          "#b4a564",
-          "#dbcb89",
-          "#fcefb8"
+          "#0f0b00",
+          "#292100",
+          "#453a02",
+          "#63550e",
+          "#807130",
+          "#a59555",
+          "#cebe7d",
+          "#fceca9"
         ],
-        "note": "Sampled exactly from the logo disc (assets/img/PowerIcon.png)."
+        "note": "Sampled exactly from the logo disc. Hero gradient and selection."
       },
-      "butter-deep": {
+      "accent-border": {
         "role": "secondary",
         "displayName": "Deep Butter",
         "canonical": "oklch(86.1% 0.125 88.6)",
         "tonalRamp": [
-          "#170700",
-          "#351f00",
-          "#563b00",
-          "#795800",
-          "#9e7b00",
-          "#c0a151",
-          "#e2c887",
-          "#ffedb7"
-        ]
-      },
-      "butter-soft": {
-        "role": "secondary",
-        "displayName": "Soft Butter",
-        "canonical": "oklch(96.5% 0.045 96.2)",
-        "tonalRamp": [
           "#110a00",
-          "#2a2407",
-          "#474023",
-          "#655e40",
-          "#888162",
-          "#ada585",
-          "#d3cbaa",
-          "#f7efcd"
-        ]
-      },
-      "bark": {
-        "role": "primary",
-        "displayName": "Bark Brown",
-        "canonical": "oklch(52.6% 0.058 78.6)",
-        "tonalRamp": [
-          "#180600",
-          "#332000",
-          "#503c19",
-          "#6f5a37",
-          "#937c59",
-          "#b8a17c",
-          "#dfc7a1",
-          "#ffebc4"
+          "#2b2001",
+          "#4a3800",
+          "#69520a",
+          "#8b6d10",
+          "#b59025",
+          "#dfb955",
+          "#ffe9b5"
         ],
-        "note": "Sampled exactly from the logo outline. 5.4:1 on white, 4.4:1 on butter: no small bark text on butter."
+        "note": "Badge and alert borders; nav link hover fill."
       },
-      "bark-dark": {
-        "role": "primary",
-        "displayName": "Deep Bark",
-        "canonical": "oklch(37.9% 0.042 76.0)",
-        "tonalRamp": [
-          "#150800",
-          "#30210a",
-          "#4d3d26",
-          "#6c5b43",
-          "#8f7d64",
-          "#b4a288",
-          "#dbc7ad",
-          "#ffebd0"
-        ],
-        "note": "Focus outline, current nav tab, small text on butter. 8.2:1 against butter."
-      },
-      "bolt": {
+      "chart-focus": {
         "role": "tertiary",
         "displayName": "Bolt Orange",
         "canonical": "oklch(64.4% 0.134 65.4)",
         "tonalRamp": [
-          "#1e0200",
-          "#3f1700",
-          "#633100",
-          "#8a4c00",
-          "#b16f1e",
-          "#d2975a",
-          "#f3bf8d",
-          "#ffe5bc"
+          "#150800",
+          "#331b00",
+          "#553102",
+          "#7a4804",
+          "#a16006",
+          "#cd8229",
+          "#f8ab58",
+          "#fee7d0"
         ],
-        "note": "The logo bolt #eba746 (about 2:1 on white) deepened to about 3.4:1 on white. Named data mark and text caret only; never text or focus."
+        "note": "The logo bolt deepened for white. Only the data mark under discussion, the eyebrow dot and the small-sample rule. Never focus."
       },
-      "bolt-ink": {
+      "brand-ink": {
         "role": "tertiary",
         "displayName": "Bolt Ink",
         "canonical": "oklch(49.3% 0.105 63.5)",
         "tonalRamp": [
-          "#1e0100",
-          "#401600",
-          "#643000",
-          "#864e09",
-          "#ac7136",
-          "#d3965c",
-          "#f4bf8e",
-          "#ffe5bd"
-        ]
+          "#150800",
+          "#341a00",
+          "#563003",
+          "#7b4705",
+          "#9c6326",
+          "#c3864c",
+          "#eeaf74",
+          "#fee6d2"
+        ],
+        "note": "Orange read as text: calculator total, link hover, small-sample badge."
       },
-      "ink": {
+      "destructive": {
         "role": "neutral",
-        "displayName": "Report Ink",
-        "canonical": "oklch(22.5% 0.019 66.6)",
+        "displayName": "Destructive",
+        "canonical": "oklch(50.0% 0.182 29.5)",
         "tonalRamp": [
-          "#110904",
-          "#2b221a",
-          "#473e35",
-          "#655c52",
-          "#887e74",
-          "#ada298",
-          "#d4c8be",
-          "#f8ece1"
-        ]
-      },
-      "ink-soft": {
-        "role": "neutral",
-        "displayName": "Soft Ink",
-        "canonical": "oklch(38.1% 0.027 64.6)",
-        "tonalRamp": [
-          "#130902",
-          "#2d2116",
-          "#4a3d31",
-          "#695b4e",
-          "#8c7d70",
-          "#b1a294",
-          "#d7c7b9",
-          "#fcebdc"
-        ]
-      },
-      "muted": {
-        "role": "neutral",
-        "displayName": "Muted Bark-Grey",
-        "canonical": "oklch(49.0% 0.030 72.8)",
-        "tonalRamp": [
-          "#130901",
-          "#2d2213",
-          "#4a3d2e",
-          "#685b4b",
-          "#8b7e6d",
-          "#b0a291",
-          "#d7c8b6",
-          "#fbecd9"
-        ]
-      },
-      "paper": {
-        "role": "neutral",
-        "displayName": "Paper White",
-        "canonical": "oklch(100% 0 0)",
-        "tonalRamp": [
-          "#0b0b0b",
-          "#242424",
-          "#404040",
-          "#5d5d5d",
-          "#808080",
-          "#a4a4a4",
-          "#cacaca",
-          "#eeeeee"
-        ]
-      },
-      "line": {
-        "role": "neutral",
-        "displayName": "Warm Hairline",
-        "canonical": "oklch(88.8% 0.040 86.1)",
-        "tonalRamp": [
-          "#120900",
-          "#2d230b",
-          "#493e27",
-          "#685c44",
-          "#8b7f65",
-          "#b0a389",
-          "#d6c9ae",
-          "#faedd1"
-        ]
-      },
-      "error": {
-        "role": "neutral",
-        "displayName": "Error Rust",
-        "canonical": "oklch(48.5% 0.152 33.9)",
-        "tonalRamp": [
-          "#220000",
-          "#450d02",
-          "#6c2616",
-          "#953f2c",
-          "#be624d",
-          "#de8c78",
-          "#feb6a5",
-          "#ffdecf"
-        ]
+          "#1f0000",
+          "#460301",
+          "#730301",
+          "#a20501",
+          "#c53629",
+          "#f05f4e",
+          "#ffa192",
+          "#ffe4e0"
+        ],
+        "note": "Validation errors. 6.6:1 on white."
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Page h1 on the Home cover and inner report headers. Condensed (font-stretch 72%) heavy."
+        "purpose": "Page h1. Geist 600, clamp(2.25rem, 5vw, 3.5rem), tracking -0.035em."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Section and finding h2s."
+        "purpose": "Section and finding h2s. Geist 600, clamp(1.6rem, 3vw, 2rem), tracking -0.025em."
       },
-      "headline-panel": {
-        "displayName": "Headline, panel",
-        "purpose": "Verdict box h2; About prose h2s share the 1.6-2.1rem endpoints on a 3vw slope; method and results headings hold at 1.6rem."
-      },
-      "title": {
-        "displayName": "Title",
-        "purpose": "h3s and label-guide terms."
-      },
-      "figure": {
-        "displayName": "Figure",
-        "purpose": "Finding numerals; 3rem under 600px."
-      },
-      "figure-total": {
-        "displayName": "Figure, total",
-        "purpose": "The calculator's yearly cost total."
+      "card-title": {
+        "displayName": "Card Title",
+        "purpose": "Verdict, method, results and info-panel headings. 600, 1.125 to 1.3rem."
       },
       "standfirst": {
         "displayName": "Standfirst",
-        "purpose": "Lead paragraph under a page h1, max 56ch, soft ink."
-      },
-      "lead": {
-        "displayName": "Lead",
-        "purpose": "FAQ questions and imperative lines."
+        "purpose": "Lead paragraph under a page h1. 400, clamp(1.05rem, 1.6vw, 1.2rem), muted, max 56ch."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Reading text at normal width, max 68ch, tabular figures; 1rem under 600px."
-      },
-      "table": {
-        "displayName": "Table",
-        "purpose": "Data tables and findings-rail links."
+        "purpose": "Reading text. 400, 1rem, line height 1.65, tabular figures, max 68ch."
       },
       "small": {
-        "displayName": "Small",
-        "purpose": "Byline, footer, input units, field errors."
+        "displayName": "Small / Label",
+        "purpose": "Nav, buttons, field labels, table heads, captions. 500, 0.8 to 0.9rem."
       },
-      "label": {
-        "displayName": "Label",
-        "purpose": "Definition terms in method and info panels at 700; the same 0.85rem at 400 carries captions, fine print and field hints. Sentence case."
-      },
-      "micro": {
-        "displayName": "Micro",
-        "purpose": "Wordmark subtitle (part of the logo lockup) and small-sample notes."
+      "figure-total": {
+        "displayName": "Figure Total",
+        "purpose": "Calculator yearly cost. 600, clamp(2.5rem, 5vw, 3.25rem), brand ink."
       }
     },
     "rules": [
       {
         "name": "focus",
-        "value": "3px solid var(--bark-dark), offset 3px (inputs and selects 1px); outline-color butter inside the footer",
+        "value": "2px solid var(--ring) (#4f3f28), offset 2px; inputs and selects also turn their border to var(--ring)",
         "purpose": "Every focusable element. Never bolt."
       },
       {
-        "name": "verdict-frame",
-        "value": "4px solid var(--bark)",
-        "purpose": "Verdict box and calculator results only."
+        "name": "radius",
+        "value": "--radius 0.625rem; sm 6px, md 8px, lg 10px, xl 14px, full 999px",
+        "purpose": "Buttons and inputs md, nav track lg, cards xl, badges and bars full."
       },
       {
-        "name": "report-rule",
-        "value": "3px solid var(--bark)",
-        "purpose": "Masthead, cover, report header, footer, FAQ, label guide, rail, prose h2s, info panel, imperatives."
-      },
-      {
-        "name": "panel-border",
-        "value": "2px solid var(--bark)",
-        "purpose": "Method panel, calculator form, inputs, buttons, table-head underline, the divider before the rail's extra links."
-      },
-      {
-        "name": "figure-rule",
-        "value": "2px solid var(--ink)",
-        "purpose": "Top of every chart figure; chart baseline stroke."
-      },
-      {
-        "name": "small-sample",
-        "value": "2px dashed var(--bark)",
-        "purpose": "Marks a group too small to rely on, always with a text label."
-      },
-      {
-        "name": "hairline",
-        "value": "1px solid var(--line)",
-        "purpose": "Row dividers."
+        "name": "card",
+        "value": "1px solid var(--border), radius xl, var(--shadow-sm)",
+        "purpose": "Every grouped panel."
       }
     ],
-    "shadows": [],
+    "shadows": [
+      {
+        "name": "shadow-xs",
+        "value": "0 1px 2px rgba(28, 25, 23, 0.05)",
+        "purpose": "Buttons, inputs, chart and FAQ cards."
+      },
+      {
+        "name": "shadow-sm",
+        "value": "0 1px 3px rgba(28, 25, 23, 0.08), 0 1px 2px -1px rgba(28, 25, 23, 0.08)",
+        "purpose": "Main cards and the current nav tab."
+      }
+    ],
     "motion": [
       {
         "name": "ease-out",
         "value": "cubic-bezier(0.16, 1, 0.3, 1)",
-        "purpose": "The only easing curve; all transitions use it."
-      },
-      {
-        "name": "grow",
-        "value": "transform 1.1s var(--ease-out), stagger 0.12s, IntersectionObserver threshold 0.4",
-        "purpose": "Score bars and D3 bars grow from scaleX(0) once on first view. Reduced motion: final state, no transition."
+        "purpose": "Bar growth and chevron turns."
       },
       {
         "name": "state",
-        "value": "0.2s var(--ease-out)",
-        "purpose": "Button fill, nav tab fill and text colour changes."
+        "value": "0.15s",
+        "purpose": "Hover and border colour changes."
       },
       {
-        "name": "toggle",
-        "value": "transform 0.25s var(--ease-out)",
-        "purpose": "FAQ plus-to-minus rotation."
+        "name": "chevron",
+        "value": "0.2s ease-out",
+        "purpose": "FAQ and data-table chevrons turning when opened."
+      },
+      {
+        "name": "grow",
+        "value": "transform scaleX 1.1s ease-out, staggered 0.12s, at 40% in view",
+        "purpose": "Score bars and D3 bars, once."
       }
     ],
     "breakpoints": [
       {
+        "name": "wide",
+        "value": "960px",
+        "purpose": "Report article top padding; rail current-item highlight only above it."
+      },
+      {
+        "name": "medium",
+        "value": "860px",
+        "purpose": "All two-column splits collapse to one column; About info card stops being sticky."
+      },
+      {
         "name": "narrow",
         "value": "600px",
-        "purpose": "max-width: masthead stacks, nav tabs tighten to 0.75rem 0.8rem, panels tighten to 1.25rem, field rows and findings stack."
-      },
-      {
-        "name": "split",
-        "value": "860px",
-        "purpose": "max-width: cover, split, calculator and About grids go to one column."
-      },
-      {
-        "name": "rail",
-        "value": "960px",
-        "purpose": "max-width: report rail stops being sticky and stacks above the article."
+        "purpose": "Header stops being sticky and stacks; nav links share the width; card padding tightens to 1rem; field rows and findings stack."
       }
     ],
     "layout": {
@@ -343,28 +351,20 @@
     },
     "componentSizes": [
       {
-        "value": "1.2rem",
-        "use": "Wordmark 'Appliance Energy' (800 condensed, uppercase); calculator figure values (800)."
+        "value": "2.75rem",
+        "use": "Minimum height of buttons, nav links, inputs, selects and the data-table toggle (44px)."
       },
       {
-        "value": "1.1rem",
-        "use": "Score-bar labels and findings-rail counters (700-800 condensed)."
+        "value": "2.5rem",
+        "use": "Finding number badge."
       },
       {
-        "value": "1.35rem",
-        "use": "Verdict score values (800 condensed)."
+        "value": "22px",
+        "use": "D3 bar labels and values in a 640-unit viewBox (30px under 600px)."
       },
       {
-        "value": "1rem",
-        "use": "Findings-rail title (800, normal width)."
-      },
-      {
-        "value": "0.7em",
-        "use": "Footnote superscripts (700)."
-      },
-      {
-        "value": "22px in a 640-unit viewBox (30px under 600px)",
-        "use": "D3 bar labels (700) and values (800), condensed; scales with the chart."
+        "value": "18px",
+        "use": "Calculator chart labels in a 400-unit viewBox (21px under 600px)."
       }
     ]
   },
@@ -373,170 +373,152 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The main action: bark fill, square, 48px. One per group.",
+      "description": "shadcn Button (default): deep-bark fill, 8px radius, 44px. One per group.",
       "html": "<a class=\"ds-btn\" href=\"#\">Read the full test</a>",
-      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0.75rem 1.4rem; border: 2px solid var(--bark, #7d6744); border-radius: 0; background: var(--bark, #7d6744); color: var(--paper, #fff); font-family: \"Archivo\", \"Helvetica Neue\", Arial, sans-serif; font-weight: 700; text-decoration: none; cursor: pointer; transition: background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn:hover { background: var(--bark-dark, #4f3f28); border-color: var(--bark-dark, #4f3f28); } .ds-btn:focus-visible { outline: 3px solid var(--bark-dark, #4f3f28); outline-offset: 3px; }"
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 2.75rem; padding: 0.5rem 1.25rem; border: 1px solid var(--primary, #4f3f28); border-radius: 8px; background: var(--primary, #4f3f28); color: #fff; font-family: \"Geist\", ui-sans-serif, system-ui, sans-serif; font-size: 0.9rem; font-weight: 500; text-decoration: none; box-shadow: 0 1px 2px rgba(28, 25, 23, 0.05); cursor: pointer; } .ds-btn:hover { background: #3d311f; border-color: #3d311f; } .ds-btn:focus-visible { outline: 2px solid var(--ring, #4f3f28); outline-offset: 2px; }"
     },
     {
-      "name": "Quiet Button",
+      "name": "Outline Button",
       "kind": "button",
-      "refersTo": "button-quiet",
-      "description": "The second action beside a primary: bark outline, soft-butter hover.",
-      "html": "<a class=\"ds-btn-quiet\" href=\"#\">Check your own TV</a>",
-      "css": ".ds-btn-quiet { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0.75rem 1.4rem; border: 2px solid var(--bark, #7d6744); border-radius: 0; background: transparent; color: var(--bark-dark, #4f3f28); font-family: \"Archivo\", \"Helvetica Neue\", Arial, sans-serif; font-weight: 700; text-decoration: none; cursor: pointer; transition: background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-quiet:hover { background: var(--butter-soft, #fcf4d2); color: var(--ink, #221a12); } .ds-btn-quiet:focus-visible { outline: 3px solid var(--bark-dark, #4f3f28); outline-offset: 3px; }"
+      "refersTo": "button-outline",
+      "description": "shadcn Button (outline): white with a stone border; deep-butter border and soft-butter fill on hover.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\">Check your own TV</a>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; min-height: 2.75rem; padding: 0.5rem 1.25rem; border: 1px solid var(--border, #e7e5e4); border-radius: 8px; background: #fff; color: var(--foreground, #1c1917); font-family: \"Geist\", ui-sans-serif, system-ui, sans-serif; font-size: 0.9rem; font-weight: 500; text-decoration: none; box-shadow: 0 1px 2px rgba(28, 25, 23, 0.05); cursor: pointer; } .ds-btn-outline:hover { border-color: #f3cd6a; background: #fcf4d2; color: #4f3f28; } .ds-btn-outline:focus-visible { outline: 2px solid var(--ring, #4f3f28); outline-offset: 2px; }"
     },
     {
       "name": "Field with Unit",
       "kind": "input",
       "refersTo": "input-field",
-      "description": "Calculator number field: label above, unit inside the right edge, square 2px bark border.",
-      "html": "<div class=\"ds-field\"><label for=\"ds-hours\">Hours used per day</label><div class=\"ds-unit\"><input id=\"ds-hours\" type=\"number\" value=\"5\"><span aria-hidden=\"true\">hrs</span></div></div>",
-      "css": ".ds-field { font-family: \"Archivo\", \"Helvetica Neue\", Arial, sans-serif; color: var(--ink, #221a12); max-width: 20rem; } .ds-field label { display: block; margin-bottom: 0.35rem; font-weight: 700; } .ds-unit { position: relative; } .ds-unit input { width: 100%; min-height: 48px; padding: 0.65rem 3.25rem 0.65rem 0.75rem; border: 2px solid var(--bark, #7d6744); border-radius: 0; background: var(--paper, #fff); color: var(--ink, #221a12); font: inherit; appearance: textfield; } .ds-unit input:focus { outline: 3px solid var(--bark-dark, #4f3f28); outline-offset: 1px; } .ds-unit span { position: absolute; top: 50%; right: 0.85rem; transform: translateY(-50%); font-size: 0.9rem; font-weight: 600; color: var(--muted, #6b5e4e); pointer-events: none; }"
+      "description": "shadcn Input: label above, unit inside the right edge, 8px radius, 44px. Focus: deep-bark border plus a 2px deep-bark outline.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-w\">Power rating</label><div class=\"ds-unit\"><input id=\"ds-w\" type=\"number\" value=\"111\"><span>W</span></div></div>",
+      "css": ".ds-field { font-family: \"Geist\", ui-sans-serif, system-ui, sans-serif; color: var(--foreground, #1c1917); max-width: 20rem; } .ds-field label { display: block; margin-bottom: 0.4rem; font-size: 0.875rem; font-weight: 500; } .ds-unit { position: relative; } .ds-unit input { width: 100%; min-height: 2.75rem; padding: 0.5rem 3.25rem 0.5rem 0.85rem; border: 1px solid var(--input, #948d86); border-radius: 8px; background: #fff; color: inherit; font: inherit; appearance: textfield; } .ds-unit input:focus { outline: 2px solid var(--ring, #4f3f28); outline-offset: 2px; border-color: var(--ring, #4f3f28); } .ds-unit span { position: absolute; top: 50%; right: 0.85rem; transform: translateY(-50%); font-size: 0.85rem; font-weight: 500; color: var(--muted-foreground, #6b645d); pointer-events: none; }"
     },
     {
-      "name": "Masthead Navigation",
-      "kind": "nav",
+      "name": "Header Navigation",
+      "kind": "navigation",
       "refersTo": "site-header",
-      "description": "Butter masthead with a 3px bark rule; square tabs fill deep butter on hover; the current page is a solid deep-bark tab with butter text.",
+      "description": "shadcn Tabs: sticky white header with blur; links in a muted track, deep-butter fill on hover, filled deep-bark tab for the current page.",
       "html": "<header class=\"ds-head\"><span class=\"ds-brand\">Appliance Energy<span>Australia</span></span><nav><a href=\"#\" aria-current=\"page\">Home</a><a href=\"#\">Televisions</a><a href=\"#\">About Us</a></nav></header>",
-      "css": ".ds-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0 1.25rem; background: var(--butter, #f8e8a5); border-bottom: 3px solid var(--bark, #7d6744); font-family: \"Archivo\", \"Helvetica Neue\", Arial, sans-serif; } .ds-brand { display: flex; flex-direction: column; padding: 0.7rem 0; font-size: 1.2rem; font-weight: 800; font-stretch: 72%; line-height: 1; letter-spacing: 0.01em; text-transform: uppercase; color: var(--ink, #221a12); } .ds-brand span { margin-top: 0.2rem; font-size: 0.8rem; font-weight: 600; font-stretch: 100%; letter-spacing: 0.08em; color: var(--bark-dark, #4f3f28); } .ds-head nav { display: flex; gap: 0.25rem; } .ds-head nav a { display: block; padding: 1.35rem 1.1rem; color: var(--bark-dark, #4f3f28); font-weight: 650; text-decoration: none; transition: background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s cubic-bezier(0.16, 1, 0.3, 1); } .ds-head nav a:hover { background: var(--butter-deep, #f3cd6a); color: var(--ink, #221a12); } .ds-head nav a[aria-current=\"page\"] { background: var(--bark-dark, #4f3f28); color: var(--butter, #f8e8a5); font-weight: 800; } .ds-head nav a:focus-visible { outline: 3px solid var(--bark-dark, #4f3f28); outline-offset: 3px; }"
+      "css": ".ds-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4rem; padding: 0 1.25rem; border-bottom: 1px solid var(--border, #e7e5e4); background: rgba(255, 255, 255, 0.85); font-family: \"Geist\", ui-sans-serif, system-ui, sans-serif; } .ds-brand { display: flex; flex-direction: column; font-size: 0.95rem; font-weight: 600; line-height: 1.15; color: var(--foreground, #1c1917); } .ds-brand span { font-size: 0.8rem; font-weight: 400; color: var(--muted-foreground, #6b645d); } .ds-head nav { display: flex; gap: 0.125rem; padding: 0.25rem; border-radius: 10px; background: var(--muted, #f5f5f4); } .ds-head nav a { display: flex; align-items: center; min-height: 2.75rem; padding: 0.4rem 0.9rem; border-radius: 8px; color: var(--muted-foreground, #6b645d); font-size: 0.875rem; font-weight: 500; text-decoration: none; } .ds-head nav a:hover { background: #f3cd6a; color: #4f3f28; } .ds-head nav a[aria-current=\"page\"] { background: var(--primary, #4f3f28); color: #fff; font-weight: 600; } .ds-head nav a:focus-visible { outline: 2px solid var(--ring, #4f3f28); outline-offset: 2px; }"
     },
     {
-      "name": "Verdict Box",
-      "kind": "custom",
+      "name": "Verdict Card",
+      "kind": "card",
       "refersTo": "verdict-box",
-      "description": "Signature scored summary: 4px bark frame on white, score rows with bark bars and one bolt focus bar.",
-      "html": "<aside class=\"ds-verdict\"><h2>Verdict: screen size sets the bill</h2><ol><li><span class=\"l\">Small</span><span class=\"t\"><span class=\"f\" style=\"width:21%\"></span></span><span class=\"v\">$52</span></li><li><span class=\"l\">Medium</span><span class=\"t\"><span class=\"f\" style=\"width:54%\"></span></span><span class=\"v\">$134</span></li><li><span class=\"l\">Large</span><span class=\"t\"><span class=\"f focus\" style=\"width:100%\"></span></span><span class=\"v\">$247</span></li></ol></aside>",
-      "css": ".ds-verdict { padding: 1.75rem; border: 4px solid var(--bark, #7d6744); background: var(--paper, #fff); color: var(--ink, #221a12); font-family: \"Archivo\", \"Helvetica Neue\", Arial, sans-serif; font-variant-numeric: tabular-nums; max-width: 28rem; } .ds-verdict h2 { margin: 0 0 1rem; font-size: 2rem; font-weight: 800; font-stretch: 72%; line-height: 1.05; letter-spacing: -0.01em; } .ds-verdict ol { margin: 0; padding: 0; list-style: none; } .ds-verdict li { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr) 4rem; align-items: center; gap: 0.75rem; padding: 0.6rem 0; border-top: 1px solid var(--line, #e6d9bd); } .ds-verdict li:last-child { border-bottom: 1px solid var(--line, #e6d9bd); } .ds-verdict .l { font-size: 1.1rem; font-weight: 700; font-stretch: 72%; } .ds-verdict .t { height: 1.1rem; } .ds-verdict .f { display: block; height: 100%; background: var(--bark, #7d6744); } .ds-verdict .f.focus { background: var(--bolt, #c47a1e); } .ds-verdict .v { font-size: 1.35rem; font-weight: 800; font-stretch: 72%; text-align: right; }"
+      "description": "shadcn Card with Progress-style score rows: rounded muted tracks, bark fills, the discussed bar in bolt.",
+      "html": "<aside class=\"ds-verdict\"><h2>Verdict: screen size sets the bill</h2><ol><li><span>Small</span><span class=\"t\"><span class=\"f w21\"></span></span><span>$52</span></li><li><span>Large</span><span class=\"t\"><span class=\"f focus w100\"></span></span><span>$247</span></li></ol></aside>",
+      "css": ".ds-verdict { max-width: 28rem; padding: 1.5rem; border: 1px solid var(--border, #e7e5e4); border-radius: 14px; background: #fff; box-shadow: 0 1px 3px rgba(28, 25, 23, 0.08), 0 1px 2px -1px rgba(28, 25, 23, 0.08); font-family: \"Geist\", ui-sans-serif, system-ui, sans-serif; color: var(--foreground, #1c1917); font-variant-numeric: tabular-nums; } .ds-verdict h2 { margin: 0 0 1rem; font-size: 1.3rem; font-weight: 600; letter-spacing: -0.025em; } .ds-verdict ol { display: grid; gap: 0.9rem; margin: 0; padding: 0; list-style: none; } .ds-verdict li { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr) 3.5rem; align-items: center; gap: 0.75rem; font-size: 0.9rem; font-weight: 500; } .ds-verdict li span:last-child { text-align: right; font-size: 1.05rem; font-weight: 600; } .ds-verdict .t { height: 0.65rem; border-radius: 999px; background: var(--muted, #f5f5f4); overflow: hidden; } .ds-verdict .f { display: block; height: 100%; border-radius: 999px; background: var(--chart, #7d6744); } .ds-verdict .f.focus { background: var(--chart-focus, #c47a1e); } .ds-verdict .w21 { width: 21%; } .ds-verdict .w100 { width: 100%; }"
     },
     {
-      "name": "Method Panel",
+      "name": "Method Card",
       "kind": "card",
       "refersTo": "method-panel",
-      "description": "Boxed 'How we tested' panel: 2px bark border, two-column definition list over hairlines.",
-      "html": "<section class=\"ds-method\"><h2>How we tested</h2><dl><div><dt>Models tested</dt><dd>4,508 televisions</dd></div><div><dt>Cost <sup>2</sup></dt><dd>Labelled kWh &times; $0.33 per kWh (an example price)</dd></div></dl></section>",
-      "css": ".ds-method { padding: 1.75rem; border: 2px solid var(--bark, #7d6744); border-radius: 0; background: var(--paper, #fff); color: var(--ink, #221a12); font-family: \"Archivo\", \"Helvetica Neue\", Arial, sans-serif; } .ds-method h2 { margin: 0 0 0.6em; font-size: 1.6rem; font-weight: 800; font-stretch: 72%; line-height: 1.05; } .ds-method dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 2rem; margin: 0; } .ds-method dl div { padding: 0.75rem 0; border-top: 1px solid var(--line, #e6d9bd); } .ds-method dt { font-size: 0.85rem; font-weight: 700; color: var(--bark, #7d6744); } .ds-method dd { margin: 0.15rem 0 0; }"
+      "description": "shadcn Card holding a two-column grid of muted tiles: small muted label above a medium value.",
+      "html": "<section class=\"ds-method\"><h2>How we tested</h2><dl><div><dt>Models tested</dt><dd>4,508 televisions</dd></div><div><dt>Cost</dt><dd>Labelled kWh &times; $0.33</dd></div></dl></section>",
+      "css": ".ds-method { padding: 1.5rem; border: 1px solid var(--border, #e7e5e4); border-radius: 14px; background: #fff; box-shadow: 0 1px 3px rgba(28, 25, 23, 0.08); font-family: \"Geist\", ui-sans-serif, system-ui, sans-serif; color: var(--foreground, #1c1917); } .ds-method h2 { margin: 0 0 0.75rem; font-size: 1.25rem; font-weight: 600; } .ds-method dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; margin: 0; } .ds-method dl div { padding: 0.85rem 1rem; border-radius: 8px; background: var(--muted, #f5f5f4); } .ds-method dt { font-size: 0.8rem; font-weight: 500; color: var(--muted-foreground, #6b645d); } .ds-method dd { margin: 0.15rem 0 0; font-size: 0.95rem; font-weight: 500; }"
     },
     {
-      "name": "Imperative",
+      "name": "Takeaway Alert",
       "kind": "custom",
       "refersTo": "imperative",
-      "description": "The one plain instruction that closes each finding: butter band under a 3px bark top rule.",
-      "html": "<p class=\"ds-imperative\">Choose the screen your room needs, not the biggest one that fits on the wall.</p>",
-      "css": ".ds-imperative { max-width: 68ch; margin: 0; padding: 1rem 1.25rem; background: var(--butter, #f8e8a5); border-top: 3px solid var(--bark, #7d6744); font-family: \"Archivo\", \"Helvetica Neue\", Arial, sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--ink, #221a12); }"
+      "description": "shadcn Alert: the one plain instruction that closes each finding, in a soft-butter rounded box with a bolt dot.",
+      "html": "<p class=\"ds-alert\">Choose the screen your room needs, not the biggest one that fits on the wall.</p>",
+      "css": ".ds-alert { display: grid; grid-template-columns: 1.25rem minmax(0, 1fr); gap: 0.75rem; max-width: 68ch; margin: 0; padding: 1rem 1.25rem; border: 1px solid #f3cd6a; border-radius: 14px; background: #fcf4d2; font-family: \"Geist\", ui-sans-serif, system-ui, sans-serif; font-weight: 500; line-height: 1.55; color: #4f3f28; } .ds-alert::before { content: \"\"; width: 1.25rem; height: 1.25rem; margin-top: 0.1rem; border-radius: 50%; background: #c47a1e; box-shadow: inset 0 0 0 4px #f8e8a5; }"
     },
     {
       "name": "Data Table with Small Sample",
       "kind": "custom",
       "refersTo": "table-head",
-      "description": "The chart's twin: disclosure, muted caption, butter head, right-aligned tabular numbers, dashed rule plus label on a small-sample row.",
-      "html": "<details class=\"ds-table\" open><summary>Show the data table</summary><table><caption>Average kWh per year by screen type (models in brackets). A dashed rule marks a group too small to rely on.</caption><thead><tr><th>Size group</th><th class=\"num\">LED</th><th class=\"num\">OLED</th></tr></thead><tbody><tr class=\"small\"><td>Small <span class=\"note\">(OLED: small sample)</span></td><td class=\"num\">163 (857)</td><td class=\"num\">232 (17)</td></tr><tr><td>Medium</td><td class=\"num\">410 (1,671)</td><td class=\"num\">381 (173)</td></tr></tbody></table></details>",
-      "css": ".ds-table { font-family: \"Archivo\", \"Helvetica Neue\", Arial, sans-serif; color: var(--ink, #221a12); font-variant-numeric: tabular-nums; } .ds-table summary { display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; color: var(--bark, #7d6744); cursor: pointer; } .ds-table summary:hover { color: var(--bolt-ink, #8a5210); } .ds-table summary:focus-visible { outline: 3px solid var(--bark-dark, #4f3f28); outline-offset: 3px; } .ds-table table { width: 100%; margin-top: 0.5rem; border-collapse: collapse; font-size: 0.95rem; } .ds-table caption { margin-bottom: 0.5rem; text-align: left; font-size: 0.85rem; color: var(--muted, #6b5e4e); } .ds-table th, .ds-table td { padding: 0.55rem 0.75rem; border-bottom: 1px solid var(--line, #e6d9bd); text-align: left; } .ds-table thead th { background: var(--butter, #f8e8a5); border-bottom: 2px solid var(--bark, #7d6744); font-weight: 700; } .ds-table .num { text-align: right; } .ds-table .small td { border-bottom: 2px dashed var(--bark, #7d6744); } .ds-table .note { font-size: 0.8rem; font-weight: 700; color: var(--bolt-ink, #8a5210); }"
+      "description": "shadcn Collapsible + Table: outline toggle with a chevron, bordered rounded table, muted head, right-aligned tabular numbers, dashed rule plus a butter badge on a small-sample row.",
+      "html": "<details class=\"ds-table\" open><summary>Show the data table</summary><div class=\"wrap\"><table><caption>Average kWh per year by star rating. A dashed rule marks a group too small to rely on.</caption><thead><tr><th>Star rating</th><th class=\"num\">Avg kWh per year</th><th class=\"num\">Models</th></tr></thead><tbody><tr class=\"small\"><td>1 star <span class=\"note\">(small sample)</span></td><td class=\"num\">1,202</td><td class=\"num\">25</td></tr><tr><td>4 stars</td><td class=\"num\">507</td><td class=\"num\">772</td></tr></tbody></table></div></details>",
+      "css": ".ds-table { font-family: \"Geist\", ui-sans-serif, system-ui, sans-serif; color: var(--foreground, #1c1917); font-variant-numeric: tabular-nums; } .ds-table summary { display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0.4rem 0.9rem; border: 1px solid var(--border, #e7e5e4); border-radius: 8px; font-size: 0.875rem; font-weight: 500; list-style: none; cursor: pointer; } .ds-table summary:hover { border-color: #f3cd6a; background: #fcf4d2; } .ds-table summary:focus-visible { outline: 2px solid var(--ring, #4f3f28); outline-offset: 2px; } .ds-table .wrap { margin-top: 0.75rem; border: 1px solid var(--border, #e7e5e4); border-radius: 14px; overflow-x: auto; } .ds-table table { width: 100%; border-collapse: collapse; font-size: 0.9rem; } .ds-table caption { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border, #e7e5e4); text-align: left; font-size: 0.825rem; color: var(--muted-foreground, #6b645d); } .ds-table th, .ds-table td { padding: 0.6rem 1rem; border-bottom: 1px solid var(--border, #e7e5e4); text-align: left; } .ds-table thead th { background: var(--surface, #fafaf9); font-weight: 500; color: var(--muted-foreground, #6b645d); } .ds-table .num { text-align: right; } .ds-table .small td { border-bottom: 1px dashed #c47a1e; } .ds-table .note { margin-left: 0.35rem; padding: 0 0.5rem; border: 1px solid #f3cd6a; border-radius: 999px; background: #fcf4d2; font-size: 0.75rem; font-weight: 500; color: #8a5210; }"
     },
     {
       "name": "Bar Chart Figure",
       "kind": "custom",
-      "refersTo": "chart-bar-focus",
-      "description": "D3 horizontal bar chart: bark bars from a zero baseline, one bolt focus bar, condensed labels and end values, ink figure rule and muted caption.",
-      "html": "<figure class=\"ds-fig\"><svg viewBox=\"0 0 640 240\" role=\"img\" aria-label=\"Average yearly running cost by screen size: Small $52, Medium $134, Large $247\"><g transform=\"translate(0,15)\"><rect class=\"bar\" x=\"110\" width=\"95\" height=\"50\"/><text class=\"lab\" x=\"96\" y=\"25\" dy=\"0.35em\" text-anchor=\"end\">Small</text><text class=\"val\" x=\"215\" y=\"25\" dy=\"0.35em\">$52</text></g><g transform=\"translate(0,95)\"><rect class=\"bar\" x=\"110\" width=\"244\" height=\"50\"/><text class=\"lab\" x=\"96\" y=\"25\" dy=\"0.35em\" text-anchor=\"end\">Medium</text><text class=\"val\" x=\"364\" y=\"25\" dy=\"0.35em\">$134</text></g><g transform=\"translate(0,175)\"><rect class=\"bar focus\" x=\"110\" width=\"450\" height=\"50\"/><text class=\"lab\" x=\"96\" y=\"25\" dy=\"0.35em\" text-anchor=\"end\">Large</text><text class=\"val\" x=\"570\" y=\"25\" dy=\"0.35em\">$247</text></g><line x1=\"110\" x2=\"110\" y1=\"0\" y2=\"240\" class=\"base\"/></svg><figcaption>Average yearly running cost by screen size group, at $0.33/kWh. Drawn with D3.</figcaption></figure>",
-      "css": ".ds-fig { margin: 0; padding-top: 1.5rem; border-top: 2px solid var(--ink, #221a12); max-width: 640px; font-family: \"Archivo\", \"Helvetica Neue\", Arial, sans-serif; } .ds-fig svg { display: block; width: 100%; height: auto; overflow: visible; } .ds-fig .bar { fill: var(--bark, #7d6744); } .ds-fig .bar.focus { fill: var(--bolt, #c47a1e); } .ds-fig .base { stroke: var(--ink, #221a12); stroke-width: 2; } .ds-fig .lab, .ds-fig .val { font-size: 22px; fill: var(--ink, #221a12); font-stretch: 72%; } .ds-fig .lab { font-weight: 700; } .ds-fig .val { font-weight: 800; } .ds-fig figcaption { margin-top: 1rem; font-size: 0.85rem; color: var(--muted, #6b5e4e); }"
+      "refersTo": "chart-bar",
+      "description": "Chart inside a card: D3 horizontal bars with 4px rounded ends, bark by default and bolt for the bar the text names, muted labels, dark values, caption under a 1px rule.",
+      "html": "<figure class=\"ds-chart\"><svg viewBox=\"0 0 400 138\" role=\"img\"><title>Small $26, Medium $67, Large $124</title><rect class=\"bar\" x=\"90\" y=\"6\" width=\"45\" height=\"34\" rx=\"4\"></rect><rect class=\"bar\" x=\"90\" y=\"52\" width=\"118\" height=\"34\" rx=\"4\"></rect><rect class=\"bar focus\" x=\"90\" y=\"98\" width=\"220\" height=\"34\" rx=\"4\"></rect></svg><figcaption>Average yearly cost, rescaled to your hours and price.</figcaption></figure>",
+      "css": ".ds-chart { max-width: 30rem; margin: 0; padding: 1.25rem; border: 1px solid var(--border, #e7e5e4); border-radius: 14px; background: #fff; font-family: \"Geist\", ui-sans-serif, system-ui, sans-serif; } .ds-chart .bar { fill: var(--chart, #7d6744); } .ds-chart .bar.focus { fill: var(--chart-focus, #c47a1e); } .ds-chart figcaption { margin-top: 1rem; padding-top: 0.85rem; border-top: 1px solid var(--border, #e7e5e4); font-size: 0.825rem; color: var(--muted-foreground, #6b645d); }"
     }
   ],
   "narrative": {
-    "northStar": "The Test Report",
-    "overview": "Every page reads as an independent consumer test report: the verdict first, the evidence second, the method and fine print last. The world is built from three materials: a white reading ground, whole bands of butter yellow that carry the warmth, and heavy bark-brown rules that divide the report the way a printed test sheet is ruled. Orange appears only where the reader should look. The palette is sampled from the course-provided power logo (`assets/img/PowerIcon.png`: a butter disc, an orange bolt and a brown outline), so the whole site is visibly the logo's world.\n\nDensity is that of a well-set report: generous section spacing (4.5rem), reading columns held to 68ch, and evidence set in ruled tables with tabular figures. One type family, Archivo, does all the work; its width axis sets rank, with condensed heavy for headlines and big figures and normal width for reading. Nothing is raised, rounded or glossy. Depth comes from rules and bands, never from shadows.\n\nThe system rejects the energy-site default of green gradients, leaf icons and grids of KPI cards. It also rejects a cream or warm-paper reading ground: the ground is white, and butter carries the warmth in bounded bands.",
+    "northStar": "shadcn/ui, in the logo's colours",
+    "overview": "The site uses the visual language of shadcn/ui: a white page, warm stone neutrals, rounded cards with a 1px border and soft shadow, small medium-weight labels, and one family (Geist). shadcn/ui is a React + Tailwind library; this site stays plain HTML, one CSS file and vanilla JavaScript, so the components are recreated in CSS under shadcn's token names. Warmth and brand come from the power logo: butter is the accent, deep bark the primary and focus colour, bark the chart colour, and bolt orange marks the one data point under discussion.",
     "keyCharacteristics": [
-      "White reading ground; butter owns whole bands (masthead, report cover, table heads, imperatives, info panels).",
-      "Heavy 3px bark rules divide the report; 1px warm hairlines divide rows.",
-      "Bolt orange marks the one data point under discussion; nothing else is orange at rest.",
-      "Deep bark is the voice of state: the current-page tab, focus outlines, small text on butter.",
-      "One family, Archivo; condensed width (72) for rank, normal width for reading.",
-      "Square corners everywhere; no shadows.",
+      "White ground, warm stone neutrals, butter only in the hero and page-header gradients and in accents.",
+      "Cards: 1px border, 14px radius, soft shadow.",
+      "Primary actions and the current nav tab are filled deep bark; hover uses butter.",
+      "One family, Geist, with tight negative tracking on headings and tabular figures.",
       "Every chart ships a data-table alternative; small samples are dashed and labelled."
     ],
     "rules": [
       {
-        "name": "The Logo Palette Rule",
-        "body": "Every colour is the logo's butter, bark or bolt, or a warm neutral derived from them. New charts and pages add no new hues without a documented reason.",
+        "name": "Logo Palette Rule",
+        "body": "Every hue is the logo's butter, bark or bolt, or a warm stone neutral. New charts add no new hues without a documented reason.",
         "section": "colors"
       },
       {
-        "name": "The White Ground Rule",
-        "body": "The reading ground is pure white. Warmth comes from bounded butter bands, never from tinting the page. No cream, ivory or warm-paper ground.",
+        "name": "Token Rule",
+        "body": "Colours are referenced through the shadcn-named custom properties in :root (background, foreground, muted, primary, accent, border, input, ring, surface). No raw colour values outside the token block, except the select chevron's data URI.",
         "section": "colors"
       },
       {
-        "name": "The Bolt Means Look Here Rule",
-        "body": "Bolt orange fills at most one mark or group per chart: the one the adjacent sentence names. Its only other use is the text caret. It is never a focus colour, a hover underline, a resting fill for a button, panel or band, or body text (use bolt ink).",
+        "name": "Bolt Means Look Here Rule",
+        "body": "Bolt orange fills at most one mark per chart, the one the adjacent sentence names, plus the eyebrow dot and small-sample rule. It is never a focus or hover colour.",
         "section": "colors"
       },
       {
-        "name": "The Dark on Butter Rule",
-        "body": "Small text and links on a butter band use deep bark or ink, never bark. Bark on butter is 4.4:1; deep bark is 8.2:1.",
-        "section": "colors"
-      },
-      {
-        "name": "The Width Sets Rank Rule",
-        "body": "Rank is expressed by width and weight, not by a second family. Condensed (width 72) at 800–900 for headlines, numerals and figures; normal width (100) for reading, questions and navigation. Do not add a display or mono face.",
-        "section": "typography"
-      },
-      {
-        "name": "The Tabular Figures Rule",
-        "body": "Every number on the site uses tabular figures and right-aligns in table columns.",
-        "section": "typography"
-      },
-      {
-        "name": "The Report Order Rule",
-        "body": "Pages run verdict, evidence, method: the claim and its figures come first, the charts and tables second, the method and limitations in plain view after (or beside) them.",
-        "section": "layout"
-      },
-      {
-        "name": "The Ruled, Not Raised Rule",
-        "body": "Separate regions with a rule or a band, never a shadow. If something needs more emphasis, give it a heavier rule or a butter band.",
+        "name": "Card Rule",
+        "body": "Grouped content sits in a card: white, 1px border, 14px radius, soft shadow. One card style for the verdict, rail, method, calculator, results and info panel.",
         "section": "elevation"
       },
       {
-        "name": "The Horizontal Rule Rule",
-        "body": "Coloured rules run full width along the top or bottom edge of a region. Never a coloured stripe down the left or right edge of a card, callout or list item.",
-        "section": "elevation"
-      },
-      {
-        "name": "The Twin Table Rule",
-        "body": "No chart ships without a data table carrying the same numbers. The chart is the headline; the table is the evidence.",
+        "name": "Visible Focus Rule",
+        "body": "Every control shows a 2px deep-bark outline at 2px offset on focus (10:1 on white, 8.2:1 on butter).",
         "section": "components"
       },
       {
-        "name": "The Dashed Sample Rule",
-        "body": "Small or unreliable groups are marked by a dashed bark line and a text label together, never by colour alone.",
+        "name": "Touch Target Rule",
+        "body": "Buttons, nav links, inputs and the data-table toggle are at least 44px tall.",
         "section": "components"
       },
       {
-        "name": "The Grow Once Rule",
-        "body": "The only authored motion is data growing from zero, once, on first view. Nothing loops, bounces or animates on load.",
+        "name": "Twin Table Rule",
+        "body": "No chart ships without a data table carrying the same numbers.",
         "section": "components"
+      },
+      {
+        "name": "Dashed Sample Rule",
+        "body": "Small or unreliable groups are marked by a dashed line and a text badge together, never by colour alone.",
+        "section": "components"
+      },
+      {
+        "name": "Grow Once Rule",
+        "body": "The only authored motion is data growing from zero, once, on first view. Reduced motion shows the final state.",
+        "section": "motion"
+      },
+      {
+        "name": "Plain Stack Rule",
+        "body": "shadcn/ui is recreated in CSS only: no React, Tailwind, build step or inline styles. Everything lives in assets/css/styles.css.",
+        "section": "overview"
       }
     ],
     "dos": [
-      "Do keep the page ground white and put warmth in whole butter bands: masthead, cover, table heads, imperatives.",
-      "Do divide the report with 3px bark rules and rows with 1px warm hairlines.",
-      "Do fill the single data mark the prose is discussing with bolt orange, and every other mark with bark.",
-      "Do mark the current page with a solid deep-bark tab and butter text, and nav hover with a deep-butter fill.",
-      "Do use deep bark or ink for small text and links on butter.",
-      "Do set headlines and big figures in Archivo condensed (width 72) at 800–900, and reading text at normal width.",
-      "Do ship a data table with every chart, start value axes at zero, and name the source in the caption.",
-      "Do mark small samples with a dashed bark line plus a text label.",
-      "Do keep every control at least 44px tall (48px for buttons and inputs) with the 3px deep-bark focus outline (butter inside the footer).",
-      "Do honour reduced motion: bars appear at full length with no transition."
+      "Do use the shadcn-named tokens in :root for every colour.",
+      "Do put grouped content in the one card style.",
+      "Do fill the single data mark the prose names with bolt orange and every other mark with bark.",
+      "Do mark the current page with the filled deep-bark tab and nav hover with the deep-butter fill.",
+      "Do keep every control at least 44px tall with the deep-bark focus outline.",
+      "Do ship a data table with every chart, start value axes at zero and name the source in the caption.",
+      "Do honour reduced motion."
     ],
     "donts": [
-      "Don't use a cream, ivory or warm-paper page ground.",
+      "Don't add React, Tailwind, a build step or inline styles.",
+      "Don't use bolt orange for focus, hover, buttons or body text.",
+      "Don't write raw colour values outside the token block.",
       "Don't use green gradients, leaf icons or a grid of KPI cards.",
-      "Don't add box shadows or rounded corners.",
-      "Don't add a coloured stripe down the left or right edge of a card, callout or list item; rules run full width across the top or bottom.",
-      "Don't put a small uppercase kicker or eyebrow label above headings.",
-      "Don't use bolt orange for focus, hover, a resting button, panel or band fill, or body text.",
-      "Don't use bark for small text on butter.",
-      "Don't add a second typeface or a monospace for figures.",
+      "Don't add a second typeface.",
       "Don't encode meaning by colour alone."
     ]
   }

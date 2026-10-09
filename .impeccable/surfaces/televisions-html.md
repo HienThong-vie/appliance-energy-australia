@@ -7,7 +7,7 @@ related_targets: ["index.html","about.html"]
 
 ## Scope and mode
 
-All three pages (Home `index.html`, Televisions `televisions.html`, About `about.html`) share one visual world. Mode: **Read**. The visitor understands something: whether screen size or screen type drives a TV's running cost.
+All three pages (Home `index.html`, Televisions `televisions.html`, About `about.html`) share one visual world. Mode: **Read**. The visitor understands something: whether screen size or a low star rating drives a TV's running cost.
 
 ## Audience, job, constraints
 
@@ -25,30 +25,29 @@ All three pages (Home `index.html`, Televisions `televisions.html`, About `about
 
 **THESIS:** The site is an independent test report on what televisions cost to run: the verdict first, the evidence second, the method and fine print last. It refuses the energy-site default of green gradients, leaf icons and a grid of KPI cards.
 
-**OWN-WORLD:**
-- **Palette:** taken from the power logo. Butter yellow owns whole bands: the report cover, verdict panels and table heads. Bark brown carries rules, headings and links. Bolt orange appears only on the data mark under discussion. The reading ground is white and butter owns the warmth. This changed from warm paper because the detector flagged the cream ground and the craft floor warns against cream drift.
-- **Components:**
-  - heavy 3px bark rules;
-  - ruled evidence tables with tabular figures;
-  - boxed "How we tested" method panels;
-  - a thick-bordered verdict box;
-  - numbered findings;
-  - footnote numerals;
-  - score bars.
-- **Type:** one family (Archivo). The width axis sets rank: condensed heavy for headlines and big figures, normal width for reading.
+**OWN-WORLD** (redesigned 8 Oct 2026 in the shadcn/ui style; see DESIGN.md):
+- **Palette:** shadcn token names on a white ground with warm stone neutrals. From the power logo: deep bark is the primary (buttons, current nav tab, focus), butter is the accent (hero gradient, badges, hover, takeaway alerts), bark is the chart colour, and bolt orange appears only on the data mark under discussion.
+- **Components** (shadcn equivalents recreated in CSS):
+  - cards with a 1px border, 14px radius and soft shadow (verdict, rail, method, calculator, results, info panel);
+  - Tabs-style navigation with a filled deep-bark current tab;
+  - Accordion FAQ, Collapsible data tables, bordered Tables with tabular figures;
+  - Badge finding numbers and eyebrow pills; Alert-style takeaways;
+  - Progress-style score bars;
+  - footnote numerals.
+- **Type:** one family (Geist), weight 600 with tight negative tracking for headings, 400 for reading.
 
 **STORY:**
 1. The buyer learns that a large TV costs about five times as much to run as a small one.
-2. They learn that screen type barely changes that, and trust it because the method and limitations sit in plain view.
+2. They learn that the star rating on the label also predicts running cost, and trust it because the method and limitations sit in plain view.
 3. They then enter their own numbers in the calculator.
 
 **FIRST VIEWPORT:**
-- **Home:** the masthead sits on a full-bleed butter cover band. The left column holds a report kicker, a condensed headline ("What 4,508 TVs cost to run"), the standfirst and the primary action "Read the full test". The right column holds the verdict box: three score bars (small $52, medium $134, large $247) and a one-line verdict.
-- **Televisions:** opens on a report header with a numbered findings rail (01–04).
+- **Home:** a sticky white header above a hero with a soft butter gradient. The left column holds an eyebrow badge, the headline ("What 4,508 TVs cost to run"), the standfirst, the primary action "Read the full test" and an outline "Check your own TV". The right column holds the verdict card: three score bars (small $52, medium $134, large $247) and a one-line verdict.
+- **Televisions:** opens on a page header with the headline beside an "In this report" card listing findings 1 to 4.
 
 **FORM:** consumer test report, position 4 of the ordered list, seed key 575543ff.
 - **Raises:**
-  - *Studio Dumbar:* butter yellow owns whole bands.
+  - *Studio Dumbar:* butter carries the warmth (now as hero gradient and accents rather than whole bands).
   - *WPA poster:* each finding ends on one plain imperative.
   - *Emission-line rail:* meaning never depends on colour alone; small groups get a dashed outline and a label.
   - *Cutting bench:* the findings rail marks where the reader is.
