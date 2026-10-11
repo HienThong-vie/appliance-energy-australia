@@ -1,4 +1,4 @@
-// Initial version generated with Claude (Anthropic). See README > Generative AI Reflection.
+// Initial version generated with Claude (Anthropic). See README > AI Declaration.
 
 const yearElement = document.getElementById("year");
 if (yearElement) {

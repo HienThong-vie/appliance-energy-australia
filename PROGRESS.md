@@ -110,21 +110,10 @@ Put the data in the workflow's `data/` folder and read it "relative to current w
 
 ## 7. GenAI declaration
 
-- [ ] **You:** list every prompt you used in the README **(R3, Critical)**:
-  - [ ] your Ex 0.2 prompts
-  - [ ] the build-plan prompt
-  - [ ] the redesign prompt
-  - [ ] the icon and nav prompt
-  - [ ] the review prompt
-- [ ] **You:** fill the four blanks in your own words: *What I changed*, *What I learned*, *Limitations* and the missing prompts. This part cannot be written by AI.
-- [ ] **You:** write the Canvas GenAI declaration in the unit's format:
-  - [ ] Introduction
-  - [ ] Tool
-  - [ ] Prompts
-  - [ ] Outputs
-  - [ ] Modifications
-  - [ ] Reflection
-  - [ ] Acknowledgement
+- [x] **You:** final declaration written in the unit's format (`GenAI_Declaration_COS30045_Demo1_ChungHienThong_106212681.pdf`): introduction, tool, prompts (the 8 main prompts, copied as typed), outputs, modifications, reflection, limitations and acknowledgement
+- [x] Full declaration published on the About Us page (`about.html#ai-declaration`) and in the README `## AI Declaration` section; footers link to it
+- [x] Reflection, What I learned and Limitations are in your own words (from the PDF)
+- [x] Every code file starts with a "generated with Claude" comment (HTML files added 11 Oct 2026, so the declaration's claim is true)
 
 ## 8. Ex 0.3: Hosting on Mercury
 
@@ -186,3 +175,4 @@ Put the data in the workflow's `data/` folder and read it "relative to current w
 | 4 Oct 2026 | Brand merge fixed in KNIME (String Replacers #19 and #20) and `brand_count.csv` re-exported: 74 brands, QBELL 13, SVISION 7, 4,508 total. The page's "brand names were standardised" claim is now true |
 | 8 Oct 2026 | Redesign in the shadcn/ui style (shadcn skill installed globally). Kept plain HTML/CSS/vanilla JS: shadcn tokens and components recreated in `styles.css` (Card, Button, Tabs nav, Accordion FAQ, Collapsible data tables, Table, Badge, Alert takeaways, Input/Select). Archivo replaced by Geist; logo colours kept as primary, accent and chart colours; current page still a filled dark-brown tab. Small eyebrow badge added above each page title. No JS or class names changed. Checked in Chrome: no console errors, calculator still $66.85 with 3 comparison bars, no horizontal scroll at 390px, all text AA contrast, input borders 3.3:1. `DESIGN.md` rewritten to match |
 | 9 Oct 2026 | /review fixes for the redesign (8 issues): nav hover now a visible deep-butter fill; focus is a 2px deep-bark outline on every control (10:1 on white; inputs also darken their border), replacing the faint orange ring; the stray divider lines in the calculator results removed (rule now only under the Home verdict scores); raw colours moved into tokens (`--surface`, `--header-background`); nav links and the data-table toggle back to 44px; DESIGN.md corrected; `.impeccable/design.json`, the surface brief and detector ignores regenerated for the new design; eyebrow badges kept and recorded in DESIGN.md |
+| 11 Oct 2026 | Final GenAI declaration (from the submitted PDF) added to `about.html` and the README. Review fixes: star-rating chart described as a line chart (alt text, README); brand data table extended to the top 10 to match `brand-count.png`; "generated with Claude" comment added to the three HTML files; code-file headers now point to README > AI Declaration; declaration styles scoped to `.ai-declaration` |

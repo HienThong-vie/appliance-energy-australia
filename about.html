@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Initial version generated with Claude (Anthropic). See README > AI Declaration. -->
 <html lang="en-AU">
 <head>
   <meta charset="UTF-8">
@@ -77,9 +78,78 @@
             <div><dt>Institution</dt><dd>Swinburne University of Technology</dd></div>
             <div><dt>Data source</dt><dd><a href="https://www.energyrating.gov.au/">energyrating.gov.au</a>, televisions extract of 15 February 2026</dd></div>
             <div><dt>Models tested</dt><dd>4,508</dd></div>
-            <div><dt>Generative AI</dt><dd>Claude (Anthropic) was used to help build this site. See the README for how it was used.</dd></div>
+            <div><dt>Generative AI</dt><dd>Claude (Anthropic) was used to help build this site. <a href="#ai-declaration">Read the full declaration</a> below, or in the README.</dd></div>
           </dl>
         </aside>
+      </div>
+    </section>
+
+    <section class="section" id="ai-declaration" aria-labelledby="ai-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Generative AI declaration</p>
+          <h2 id="ai-title">How generative AI was used</h2>
+          <p>GenAI Declaration for Demonstration 1, COS30045 Data Visualisation, by Chung Hien Thong (106212681). Dated 9 October 2026.</p>
+        </div>
+
+        <div class="prose ai-declaration">
+          <h3>Introduction and tool</h3>
+          <p>I used generative AI to speed up building the website, the D3 code, the GitHub setup, parts of the KNIME work and the submission packaging, so I could spend more time on the data and the story. I reviewed everything it produced and can explain it without reading comments.</p>
+          <p><strong>Tool:</strong> Claude (Anthropic), through the Claude desktop app (Cowork) and Claude Code.</p>
+          <p><strong>Skills used inside Claude:</strong> ui-ux-pro-max (design review), shadcn/ui (visual style), and FigJam through Claude (storyboard).</p>
+
+          <h3>How GenAI was used, per exercise</h3>
+          <div class="table-scroll">
+            <table>
+              <caption>Where Claude helped, exercise by exercise.</caption>
+              <thead>
+                <tr><th scope="col">Exercise</th><th scope="col">How GenAI was used</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">0.1 GitHub</th><td>Claude created the public repo and pushed the first commits grouped by feature, at my request.</td></tr>
+                <tr><th scope="row">0.2 Website</th><td>From the Exercise 0.2 brief, Claude generated the three HTML pages, <code>styles.css</code>, <code>main.js</code> (footer year, FAQ accordion) and the optional calculator (<code>calculator.js</code>). It later redesigned the look twice (&ldquo;Test Report&rdquo; style, then shadcn/ui style in plain CSS) and fixed issues found in reviews. Each code file starts with a comment saying it was generated with Claude.</td></tr>
+                <tr><th scope="row">1 Data processing (KNIME)</th><td>Claude explained the steps and helped find a cleaning bug: the brand merge only had the Samsung rule, so Q.Bell and S Vision were counted twice. Two String Replacer rules were added to fix it.</td></tr>
+                <tr><th scope="row">2 Exploration (KNIME)</th><td>Claude helped catch a cm-vs-inches mismatch in the histogram, and later split my exercise workflow into one workflow per website chart (KNIME_web_1 to _5).</td></tr>
+                <tr><th scope="row">3 Communicating insights</th><td>Claude restructured the Televisions page into a four-finding data story, drafted the About the data text and README sections, and built the storyboard in FigJam from the site&rsquo;s story.</td></tr>
+                <tr><th scope="row">Independent analysis</th><td>Claude checked that the original Finding 4 (screen type) was just another cut of screen size, and suggested star rating instead (Star2, because Star is 96.7% empty). It built the first version of that KNIME workflow by copying my Ex 2 node settings.</td></tr>
+                <tr><th scope="row">4.3&ndash;4.7 D3</th><td>Claude wrote <code>barchart.js</code> and <code>calcchart.js</code> following the Week 4 exercise structure (<code>d3.csv</code>, <code>scaleLinear</code>, <code>scaleBand</code>, <code>g</code> groups, labels).</td></tr>
+                <tr><th scope="row">Submission</th><td>Claude merged the per-chart workflows into one annotated <code>.knwf</code> with the data included and drafted the first versions of this declaration and the cover sheet. I then rewrote the reflection and the acknowledgement in my own words.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Prompts used</h3>
+          <p>The main prompts, copied as I typed them, in order.</p>
+          <ol class="prompt-list">
+            <li>&ldquo;in this week 4 assignment, i have to build a website involved around exercised in previous weeks, there is already prototype of this website, can you review the canvas requirement again for this website and /architect the build-plan for this website to its fullest and match with all requirement, rubrics that are required in this assignment&rdquo;</li>
+            <li>&ldquo;please /review this and make a progress tracker file what have done, what still open, once all items in this progress checker is tick, the website is complete&rdquo;</li>
+            <li>&ldquo;have you push this website on its own repo ?&rdquo;</li>
+            <li>&ldquo;please make a new one: 1. demonstration-1-COS30045, 2. public, 3.few commits&rdquo;</li>
+            <li>&ldquo;for all the found issues above, fix all that you can fix right now, issues that need my action like KNIME or genAI declaration can left open for later&rdquo;</li>
+            <li>&ldquo;please pull this skill https://github.com/shadcn-ui/ui globally that apply for this project and every project in the future&rdquo;</li>
+            <li>&ldquo;alright, now please use this skill set and redesign the website for cleaner, modern&rdquo;</li>
+            <li>&ldquo;now that i have complete the demonstration, let wrap up and prepare everything for the submission&rdquo;</li>
+          </ol>
+
+          <h3>Outputs received</h3>
+          <ul>
+            <li><strong>Code:</strong> <code>index.html</code>, <code>televisions.html</code>, <code>about.html</code>, <code>styles.css</code>, <code>main.js</code>, <code>calculator.js</code>, <code>calcchart.js</code>, <code>barchart.js</code>, <code>report.js</code>.</li>
+            <li><strong>Text:</strong> build plan, data story and About the data wording, README sections, <code>PRODUCT.md</code>, <code>DESIGN.md</code>, <code>PROGRESS.md</code>, <code>DECISIONS.md</code>.</li>
+            <li><strong>GitHub:</strong> the public repo and the first commits, grouped by feature.</li>
+            <li><strong>KNIME:</strong> help finding the brand-merge bug and the cm-vs-inches mismatch, the first version of the star-rating workflow, the rebuilt Exercise 1 and 2 workflows, and the merged, annotated <code>.knwf</code>.</li>
+            <li><strong>Storyboard:</strong> <code>docs/storyboard.png</code> (7 frames, FigJam).</li>
+            <li><strong>Submission drafts:</strong> first versions of this declaration and the cover sheet (I rewrote the reflection and acknowledgement myself).</li>
+          </ul>
+
+          <h3>Modifications and reflection</h3>
+          <p><strong>What I changed or adapted after generation:</strong> After generating the website, I ran all the KNIME workflows and exported the charts for the website. I changed star rating, shown as line plot and limited the brand chart to the top 10 brands to make the results easier to understand. I also checked the numbers shown on the website against my KNIME output to make sure they were consistent. During this process, I dealt with some issues involving duplicate brand names, CSV exports, and chart labels.</p>
+          <p><strong>What I learned:</strong> I learned how to use KNIME to clean, filter, and group data before creating visualisations. I also learned that the way data is filtered and grouped can affect the results and the conclusions drawn from a chart. Another thing I learned was the importance of checking chart labels and exported data carefully because small mistakes can make the information misleading. Overall, this project helped me understand how data processing and visualisation work together to communicate findings clearly.</p>
+          <p><strong>What helped and what misled me:</strong> KNIME helped me organise the television data and generate the results needed for the website. However, duplicate brand names made the brand analysis more difficult, and CSV export settings sometimes affected how the data was read. I also found that chart labels needed to be checked carefully to ensure that the titles and units matched the actual data being displayed. These issues taught me not to rely on generated outputs without checking them first.</p>
+          <p><strong>Limitations:</strong> The electricity price of $0.33/kWh used in the calculator is only an example, so actual running costs may be different depending on the user&rsquo;s electricity tariff. The dataset contains registered television models rather than actual sales figures, so the number of models cannot be used to determine which brands are the most popular. Actual electricity costs also depend on viewing habits, including how many hours the television is used each day. Therefore, the results should be treated as estimates for comparison rather than exact predictions of household electricity bills.</p>
+
+          <h3>Acknowledgement</h3>
+          <p>I used Claude to help generate and improve parts of the code, written content, and KNIME workflows for this project. I reviewed the generated work, made changes where needed, and checked the results against my own KNIME output. Although AI assisted me during development, I took responsibility for reviewing the final submission and understanding how its main components work.</p>
+        </div>
       </div>
     </section>
   </main>
@@ -87,7 +157,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>&copy; <span id="year">2026</span> Chung Hien Thong &middot; COS30045 Data Visualisation, Swinburne University of Technology</p>
-      <p>Built with help from generative AI (Claude, Anthropic). See the README for details.</p>
+      <p>Built with help from generative AI (Claude, Anthropic). <a href="about.html#ai-declaration">See the full declaration</a>.</p>
     </div>
   </footer>
 </body>

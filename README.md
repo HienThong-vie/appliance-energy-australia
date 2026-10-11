@@ -14,7 +14,7 @@ Live site (Mercury): https://mercury.swin.edu.au/cos30045/s106212681/appliance-e
 | --- | --- | --- |
 | Home | `index.html` | Introduction, a running-cost example from the data, how to read the Energy Rating Label, FAQ accordion |
 | Televisions | `televisions.html` | Data story in four steps (size distribution, size vs energy, cost by size group, star rating), takeaways, brand context, Appliance Energy Calculator |
-| About Us | `about.html` | Audience, data source, processing, privacy, accuracy and limitations, ethics |
+| About Us | `about.html` | Audience, data source, processing, privacy, accuracy and limitations, ethics, full Generative AI declaration |
 
 ## Folder structure
 
@@ -82,7 +82,7 @@ The calculator's D3 chart loads a CSV file, so the pages need to be served over 
 1. What sizes are on the market (histogram)
 2. Energy use rises with size (scatter plot)
 3. What that means in dollars per year for small, medium and large TVs (bar chart made in KNIME)
-4. The star rating is a reliable guide to running cost (bar chart made in KNIME)
+4. The star rating is a reliable guide to running cost (line chart made in KNIME)
 5. Three takeaways, then the calculator so readers can try their own numbers, with a D3 chart comparing their cost with the average TVs
 
 Each chart has a title that states the finding, a sentence or two of context, and a caption with the source.
@@ -117,48 +117,61 @@ Each chart has a title that states the finding, a sentence or two of context, an
 
 ## AI Declaration
 
-The declaration for Exercise 3 is the Generative AI Reflection below, written in the unit's format: introduction, tool, prompts, outputs, modifications, reflection and acknowledgement.
+GenAI Declaration for Demonstration 1, COS30045 Data Visualisation, Chung Hien Thong (106212681), dated 9 October 2026. The same text is published on the site's [About Us page](about.html#ai-declaration). The full PDF submitted to Canvas is `GenAI_Declaration_COS30045_Demo1_ChungHienThong_106212681.pdf`.
 
-## Generative AI Reflection
+### Introduction and tool
 
-**Introduction:** I used GenAI to speed up building the website so I could spend more time on the data processing and the story.
+I used generative AI to speed up building the website, the D3 code, the GitHub setup, parts of the KNIME work and the submission packaging, so I could spend more time on the data and the story. I reviewed everything it produced and can explain it without reading comments.
 
-**Tool used:** Claude (Anthropic), through the Claude desktop app and Claude Code.
+**Tool:** Claude (Anthropic), through the Claude desktop app (Cowork) and Claude Code.
 
-**What I used it for:**
-- **Exercise 0.2:** I gave Claude the Exercise 0.2 requirements and asked it to build the whole site, including the optional calculator, with a professional look. It produced the HTML pages, the stylesheet and both JavaScript files. It also tested the pages in a headless browser and fixed a grammar error in a validation message and a layout issue with the number input spinners.
-- **Exercise 3 and Week 4:**
-  - I asked Claude Code to review the Canvas requirements and rubric and plan the build.
-  - It restructured the Televisions page into a data story and wrote `barchart.js` following the structure of Exercises 4.3 to 4.7.
-  - It updated the About page and this README.
-- **Design and finishing:**
-  - Using the ui-ux-pro-max and Impeccable skills, Claude redesigned the look of all three pages as a consumer "test report", in colours sampled from the power logo. An independent AI reviewer checked the result, and its fixes were applied.
-  - It added the logo and changed the current-page navigation from an underline to a filled tab.
-  - It reviewed the site against the Canvas requirements, wrote `PROGRESS.md`, and published the code to GitHub in feature commits.
-  - Later, I installed the shadcn/ui skill and asked Claude to make the design cleaner and more modern. The site stayed plain HTML, CSS and JavaScript; Claude recreated the shadcn/ui look (tokens, cards, buttons, tabs, accordion, tables) in `styles.css`, changed the font to Geist and rewrote `DESIGN.md`.
-- Each code file starts with a comment saying it was generated with Claude.
+**Skills used inside Claude:** ui-ux-pro-max (design review), shadcn/ui (visual style), and FigJam through Claude (storyboard).
 
-**Prompts:**
-- "in this week 4 assignment, i have to build a website involved around exercised in previous weeks, there is already prototype of this website, can you review the canvas requirement again for this website and /architect the build-plan for this website to its fullest and match with all requirement, rubrics that are required in this assignment"
-- "can i see the live website first"
-- "/impeccable init"
-- "i have downloaded the website icon. what i need you to do next is that using approriate and suitable ui-ux-pro-max skill in its skill set and immpeccable plugin to even enhance the website UI design further"
-- "alright, please add the website icon and then also fix this styling, instead it highlight the section where we stay by darkening the bottom border, please use different way to highlight it instead of this way"
-- "please /review this and make a progress tracker file what have done, what still open, once all items in this progress checker is tick, the website is complete"
-- "have you push this website on its own repo ?"
-- "please make a new one: 1. demonstration-1-COS30045, 2. public, 3.few commits"
-- "for all the found issues above, fix all that you can fix right now, issues that need my action like KNIME or genAI declaration can left open for later"
-- "please pull this skill https://github.com/shadcn-ui/ui globally that apply for this project and every project in the future"
-- "alright, now please use this skill set and redesign the website for cleaner, modern"
-- Answers to Claude's multiple-choice questions: scope (Demo 1 plus the D3 chart), data source (my own KNIME work), audience (TV buyers), redesign depth, and the visual direction ("The Test Report").
-- _Add the Exercise 0.2 prompts here (copy them from the chat)._
+### How GenAI was used, per exercise
 
-**Outputs received:** the HTML, CSS and JavaScript files listed above, a build plan, draft wording for the data story and data sections, the redesigned stylesheet, `PRODUCT.md`, `DESIGN.md` and `PROGRESS.md`, and the Exercise 3 storyboard (`docs/storyboard.png`), built in FigJam with Claude from the site's existing data story.
+| Exercise | How GenAI was used |
+| --- | --- |
+| 0.1 GitHub | Claude created the public repo and pushed the first commits grouped by feature, at my request. |
+| 0.2 Website | From the Exercise 0.2 brief, Claude generated the three HTML pages, `styles.css`, `main.js` (footer year, FAQ accordion) and the optional calculator (`calculator.js`). It later redesigned the look twice ("Test Report" style, then shadcn/ui style in plain CSS) and fixed issues found in reviews. Each code file starts with a comment saying it was generated with Claude. |
+| 1 Data processing (KNIME) | Claude explained the steps and helped find a cleaning bug: the brand merge only had the Samsung rule, so Q.Bell and S Vision were counted twice. Two String Replacer rules were added to fix it. |
+| 2 Exploration (KNIME) | Claude helped catch a cm-vs-inches mismatch in the histogram, and later split my exercise workflow into one workflow per website chart (KNIME_web_1 to _5). |
+| 3 Communicating insights | Claude restructured the Televisions page into a four-finding data story, drafted the About the data text and README sections, and built the storyboard in FigJam from the site's story. |
+| Independent analysis | Claude checked that the original Finding 4 (screen type) was just another cut of screen size, and suggested star rating instead (Star2, because Star is 96.7% empty). It built the first version of that KNIME workflow by copying my Ex 2 node settings. |
+| 4.3-4.7 D3 | Claude wrote `barchart.js` and `calcchart.js` following the Week 4 exercise structure (`d3.csv`, `scaleLinear`, `scaleBand`, `g` groups, labels). |
+| Submission | Claude merged the per-chart workflows into one annotated `.knwf` with the data included and drafted the first versions of this declaration and the cover sheet. I then rewrote the reflection and the acknowledgement in my own words. |
 
-**What I changed or adapted after generation:** _Write what you changed yourself, e.g. checked the story numbers against my KNIME output, chart colours, wording, presets._
+### Prompts used
 
-**What I learned:** _In your own words: e.g. how `aria-expanded` and `hidden` drive the accordion, how the calculator reads and validates DOM values, how `scaleBand` and `scaleLinear` position the D3 bars._
+The main prompts, copied as I typed them, in order.
 
-**Limitations or issues:** _e.g. the electricity price is an example, standby power is not included, anything that did not work first time._
+1. "in this week 4 assignment, i have to build a website involved around exercised in previous weeks, there is already prototype of this website, can you review the canvas requirement again for this website and /architect the build-plan for this website to its fullest and match with all requirement, rubrics that are required in this assignment"
+2. "please /review this and make a progress tracker file what have done, what still open, once all items in this progress checker is tick, the website is complete"
+3. "have you push this website on its own repo ?"
+4. "please make a new one: 1. demonstration-1-COS30045, 2. public, 3.few commits"
+5. "for all the found issues above, fix all that you can fix right now, issues that need my action like KNIME or genAI declaration can left open for later"
+6. "please pull this skill https://github.com/shadcn-ui/ui globally that apply for this project and every project in the future"
+7. "alright, now please use this skill set and redesign the website for cleaner, modern"
+8. "now that i have complete the demonstration, let wrap up and prepare everything for the submission"
 
-**Acknowledgement:** Parts of the code and text in this repository were generated with Claude and are not entirely my original work. I have reviewed and can explain all of it.
+### Outputs received
+
+- **Code:** `index.html`, `televisions.html`, `about.html`, `styles.css`, `main.js`, `calculator.js`, `calcchart.js`, `barchart.js`, `report.js`.
+- **Text:** build plan, data story and About the data wording, README sections, `PRODUCT.md`, `DESIGN.md`, `PROGRESS.md`, `DECISIONS.md`.
+- **GitHub:** the public repo and the first commits, grouped by feature.
+- **KNIME:** help finding the brand-merge bug and the cm-vs-inches mismatch, the first version of the star-rating workflow, the rebuilt Exercise 1 and 2 workflows, and the merged, annotated `.knwf`.
+- **Storyboard:** `docs/storyboard.png` (7 frames, FigJam).
+- **Submission drafts:** first versions of this declaration and the cover sheet (I rewrote the reflection and acknowledgement myself).
+
+### Modifications and reflection
+
+**What I changed or adapted after generation:** After generating the website, I ran all the KNIME workflows and exported the charts for the website. I changed star rating, shown as line plot and limited the brand chart to the top 10 brands to make the results easier to understand. I also checked the numbers shown on the website against my KNIME output to make sure they were consistent. During this process, I dealt with some issues involving duplicate brand names, CSV exports, and chart labels.
+
+**What I learned:** I learned how to use KNIME to clean, filter, and group data before creating visualisations. I also learned that the way data is filtered and grouped can affect the results and the conclusions drawn from a chart. Another thing I learned was the importance of checking chart labels and exported data carefully because small mistakes can make the information misleading. Overall, this project helped me understand how data processing and visualisation work together to communicate findings clearly.
+
+**What helped and what misled me:** KNIME helped me organise the television data and generate the results needed for the website. However, duplicate brand names made the brand analysis more difficult, and CSV export settings sometimes affected how the data was read. I also found that chart labels needed to be checked carefully to ensure that the titles and units matched the actual data being displayed. These issues taught me not to rely on generated outputs without checking them first.
+
+**Limitations:** The electricity price of $0.33/kWh used in the calculator is only an example, so actual running costs may be different depending on the user's electricity tariff. The dataset contains registered television models rather than actual sales figures, so the number of models cannot be used to determine which brands are the most popular. Actual electricity costs also depend on viewing habits, including how many hours the television is used each day. Therefore, the results should be treated as estimates for comparison rather than exact predictions of household electricity bills.
+
+### Acknowledgement
+
+I used Claude to help generate and improve parts of the code, written content, and KNIME workflows for this project. I reviewed the generated work, made changes where needed, and checked the results against my own KNIME output. Although AI assisted me during development, I took responsibility for reviewing the final submission and understanding how its main components work.
