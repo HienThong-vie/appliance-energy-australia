@@ -6,7 +6,7 @@ Author: Chung Hien Thong
 
 Repository: https://github.com/HienThong-vie/demonstration-1-COS30045
 
-Live site (Mercury): _add the URL after uploading (Exercise 0.3)._
+Live site (Mercury): https://mercury.swin.edu.au/cos30045/s106212681/appliance-energy-website/about.html
 
 ## Pages
 
