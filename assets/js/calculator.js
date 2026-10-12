@@ -1,5 +1,3 @@
-// Initial version generated with Claude (Anthropic). See README > AI Declaration.
-
 const PRESETS = {
   tvSmall: { label: "a small TV", watts: 43, hours: 5 },
   tvMedium: { label: "a medium TV", watts: 111, hours: 5 },

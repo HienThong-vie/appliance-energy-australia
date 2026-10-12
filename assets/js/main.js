@@ -1,5 +1,3 @@
-// Initial version generated with Claude (Anthropic). See README > AI Declaration.
-
 const yearElement = document.getElementById("year");
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();

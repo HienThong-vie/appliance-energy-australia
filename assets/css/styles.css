@@ -1,5 +1,3 @@
-/* Initial version generated with Claude (Anthropic). See README > AI Declaration. */
-
 /* Design tokens follow the shadcn/ui naming (background, card, muted, primary, accent, border, ring).
    Neutrals are a warm stone grey; the accent and chart colours are sampled from the power logo. */
 :root {
@@ -1269,59 +1267,6 @@ select:focus {
 
 .prose p {
   color: var(--muted-foreground);
-}
-
-.ai-declaration ul,
-.ai-declaration ol {
-  margin: 0 0 1em;
-  padding-left: 1.25rem;
-  color: var(--muted-foreground);
-}
-
-.ai-declaration li {
-  margin-bottom: 0.5em;
-}
-
-.ai-declaration strong {
-  color: var(--foreground);
-  font-weight: 500;
-}
-
-.ai-declaration code {
-  padding: 0.1em 0.35em;
-  border-radius: var(--radius-sm, 0.25rem);
-  background: var(--muted);
-  font-size: 0.85em;
-}
-
-/* Generative AI declaration (About page) */
-
-.ai-declaration {
-  max-width: 80ch;
-}
-
-.ai-declaration h3:first-child {
-  margin-top: 0;
-}
-
-.ai-declaration .table-scroll {
-  margin-bottom: 1em;
-}
-
-.ai-declaration tbody th {
-  width: 30%;
-  font-weight: 500;
-  vertical-align: top;
-}
-
-.ai-declaration td {
-  vertical-align: top;
-  color: var(--muted-foreground);
-}
-
-.prompt-list li::marker {
-  color: var(--foreground);
-  font-weight: 500;
 }
 
 .info-panel {

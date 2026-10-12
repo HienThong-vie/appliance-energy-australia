@@ -1,5 +1,3 @@
-// Initial version generated with Claude (Anthropic). See README > AI Declaration.
-
 const compareWidth = 400;
 const compareRowHeight = 46;
 const compareLabelWidth = 90;

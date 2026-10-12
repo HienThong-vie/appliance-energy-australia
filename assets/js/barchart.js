@@ -1,5 +1,3 @@
-// Initial version generated with Claude (Anthropic), following Exercises 4.3 to 4.7. See README > AI Declaration.
-
 const chartWidth = 640;
 const chartHeight = 240;
 const labelWidth = 110;

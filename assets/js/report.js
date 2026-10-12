@@ -1,5 +1,3 @@
-// Initial version generated with Claude (Anthropic). See README > AI Declaration.
-
 const motionAllowed = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 const growObserver = new IntersectionObserver(entries => {
