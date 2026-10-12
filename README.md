@@ -1,21 +1,29 @@
 # Appliance Energy Australia
 
-A three-page website about household appliance energy use in Australia, built for COS30045 Data Visualisation. It started as Exercise 0.2, was extended into the Exercise 3 data story about television running costs, and includes D3 bar charts built with the Week 4 pattern (Exercises 4.3 to 4.7).
+**Does a bigger screen, or a low star rating, really raise your power bill?** An interactive data story built on the Australian Government's Energy Rating data for 4,508 televisions, with a running-cost calculator so readers can check their own TV.
 
-Author: Chung Hien Thong
+**Live site:** https://hienthong-vie.github.io/appliance-energy-australia/
 
-Built with: HTML, CSS, vanilla JavaScript, D3.js, KNIME (data cleaning and analysis)
+![Home page: what 4,508 TVs cost to run](docs/screenshots/home.png)
 
-Repository: https://github.com/HienThong-vie/applianceenergyaustralia
+## Highlights
 
-Live site (Mercury): https://mercury.swin.edu.au/cos30045/s106212681/appliance-energy-website/about.html
+- **Data pipeline in KNIME:** cleaned 4,724 raw registrations down to 4,508 models on sale in Australia. This meant standardising brand names (and fixing a duplicate-brand bug), converting screen sizes from cm to inches, grouping by size and star rating, and exporting tidy CSVs for the site.
+- **Data story:** four findings that move from context to answer to action. They cover the size distribution, size vs energy, yearly cost by size group (large TVs cost about 5× more to run than small ones), and whether the star rating predicts running cost.
+- **D3.js charts:** data loaded with `d3.csv()`, bound with `selectAll().data().join()`, and scaled with `scaleLinear`/`scaleBand`. The charts are responsive through `viewBox` and fall back to a static image if D3 can't load.
+- **Energy calculator:** written in vanilla JavaScript, with per-field validation and live updates. It works out daily, monthly and yearly energy and cost, then draws a D3 chart comparing your TV with the average small, medium and large TV.
+- **Accessible, responsive design:** a single CSS file with design tokens, a keyboard-friendly FAQ accordion, visible focus states, reduced-motion support, and layouts that work on phones and in print.
+
+Built with HTML, CSS, vanilla JavaScript, D3.js v7 and KNIME. There is no framework and no build step.
+
+![Televisions page: the four-finding data story](docs/screenshots/televisions.png)
 
 ## Pages
 
 | Page | File | What it contains |
 | --- | --- | --- |
-| Home | `index.html` | Introduction, a running-cost example from the data, how to read the Energy Rating Label, FAQ accordion |
-| Televisions | `televisions.html` | Data story in four steps (size distribution, size vs energy, cost by size group, star rating), takeaways, brand context, Appliance Energy Calculator |
+| Home | `index.html` | Headline finding, a running-cost example from the data, how to read the Energy Rating Label, FAQ accordion |
+| Televisions | `televisions.html` | Data story in four findings, takeaways, brand context, Appliance Energy Calculator |
 | About Us | `about.html` | Audience, data source, processing, privacy, accuracy and limitations, ethics |
 
 ## Folder structure
@@ -33,43 +41,16 @@ Live site (Mercury): https://mercury.swin.edu.au/cos30045/s106212681/appliance-e
     js/calcchart.js      D3 chart in the calculator results: your cost beside the average small, medium and large TV
     js/calculator.js     Appliance Energy Calculator (Televisions page)
     data/                CSV files exported from KNIME for the D3 charts
-    img/PowerIcon.png    power logo provided on Canvas
+    img/PowerIcon.png    power logo
     img/charts/          chart images exported from KNIME
-  docs/storyboard.png    Exercise 3 storyboard
+  docs/storyboard.png    storyboard of the reader journey
+  docs/screenshots/      screenshots used in this README
   README.md
 ```
 
-## Requirements checklist
-
-Exercise 0.2
-- Three pages with a top navigation bar on every page
-- Power logo top-left, links back to Home
-- Hover effect on navigation links (deep butter fill); current page marked with `aria-current="page"` and a filled dark-brown tab
-- FAQ hidden by default, opened and closed with JavaScript (accordion)
-- All styling in `assets/css/styles.css`, no inline styles
-- Footer on every page with the current year (set by JavaScript), and author name
-- Optional extension: Appliance Energy Calculator in vanilla JavaScript
-  - Inputs: appliance (TV presets use the average power of each size group), power rating (W), hours per day, electricity price ($/kWh)
-  - Outputs: daily, monthly and yearly energy (kWh), monthly and yearly cost
-  - Results shown in a panel on the page and replaced on each update, not duplicated
-  - Validation messages next to each input; results hidden until inputs are valid
-  - After the first Calculate, results update as inputs change
-
-Exercise 3
-- Audience and data story described below
-- Televisions page tells the story with text that puts each chart in context
-- README sections: Data Story, About the data
-
-Exercises 4.3 to 4.7
-- `d3.csv()` with a row conversion function so numbers are typed correctly
-- Data bound to SVG groups with `selectAll().data().join()`
-- `scaleLinear` for bar length and `scaleBand` for bar position and thickness
-- Category and value labels in each group; responsive SVG using `viewBox`
-- Replaces the static KNIME image, which stays visible if the data cannot load
-
 ## Running locally
 
-The calculator's D3 chart loads a CSV file, so the pages need to be served over HTTP. Use the Live Server extension in VS Code (or `python -m http.server` in this folder) and open `index.html`. All paths are relative, so the same files work when uploaded to Mercury (see Exercise 0.3).
+The calculator's D3 chart loads a CSV file, so the pages need to be served over HTTP. Run `python -m http.server` in this folder (or use VS Code's Live Server) and open `http://localhost:8000`. All paths are relative, so the same files work on any static host.
 
 ## Data Story
 
@@ -93,7 +74,7 @@ Each chart has a title that states the finding, a sentence or two of context, an
 
 ## About the data
 
-**Source:** Energy Rating registration data for televisions, published by the Australian Government ([energyrating.gov.au](https://www.energyrating.gov.au/)), extract `tv_2026_02_15.csv` (4,724 rows). Each row is one registered model. Column meanings come from the data dictionary provided on Canvas.
+**Source:** Energy Rating registration data for televisions, published by the Australian Government ([energyrating.gov.au](https://www.energyrating.gov.au/)), extract `tv_2026_02_15.csv` (4,724 rows). Each row is one registered model. Column meanings come from the Energy Rating data dictionary.
 
 **Processing (KNIME):**
 - CSV Reader (data stored in the workflow data area so the exported workflow includes it)
@@ -116,3 +97,7 @@ Each chart has a title that states the finding, a sentence or two of context, an
 - The electricity price is an example; tariffs vary by state and retailer.
 
 **Ethics:** No brand or model is recommended. Bar charts start at zero. Small groups (for example, 8 models at 8 stars) are flagged so averages are not over-read.
+
+## Context
+
+Built by Chung Hien Thong for COS30045 Data Visualisation at Swinburne University of Technology.
